@@ -11,8 +11,6 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     libcairo2-dev \
     build-essential \
-    meson \
-    ninja-build \
     make \
     dos2unix \
     recode \
@@ -24,6 +22,7 @@ RUN apt-get update && apt-get install -y \
 # Copy requirements.txt and install pip dependencies
 COPY requirements.txt .
 
+RUN pip3 install meson ninja
 RUN pip3 install -r requirements.txt
 RUN pip3 install codespell
 
