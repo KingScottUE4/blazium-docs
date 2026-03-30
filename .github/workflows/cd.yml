@@ -70,11 +70,27 @@ jobs:
           source .venv/bin/activate
           sphinx-build -b pdf . _build/pdf
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v2
+      - name: Create GitHub Release
+        id: createRelease
+        uses: ./.github/actions/create-github-release
         with:
-          name: Documentation - ${{ github.ref_name }}
-          tag_name: docs-${{ github.ref_name }}-${{ github.sha }}
-          files: |
-            _build/epub/BlaziumEngine.epub
-            _build/pdf/BlaziumEngine.pdf
+          GITHUB_TOKEN: ${{ secrets.PRIVATE_GITHUB_PAT }}
+          OWNER: blazium-games
+          REPO: blazium-docs
+          TARGET_COMMIT: ${{ github.sha }}
+          TAG_NAME: docs-${{ github.ref_name }}-${{ github.sha }}
+          NAME: Documentation - ${{ github.ref_name }}
+          DRAFT: "false"
+          PRERELEASE: "false"
+          GENERATE_RELEASE_NOTES: "true"
+          DEBUG: "true"
+
+      - name: Upload assets to GitHub release
+        uses: ./.github/actions/upload-github-release
+        with:
+          GITHUB_TOKEN: ${{ secrets.PRIVATE_GITHUB_PAT }}
+          UPLOAD_URL: ${{ steps.createRelease.outputs.upload_url }}
+          FILES: |
+            ${{ github.workspace }}/_build/epub/BlaziumEngine.epub
+            ${{ github.workspace }}/_build/pdf/BlaziumEngine.pdf
+          DEBUG: "true"
