@@ -318,10 +318,8 @@ if is_i18n and os.path.exists("../classes/" + language):
 # all pages. This is used in index.rst to display the Weblate badge.
 # On English pages, the badge points to the language-neutral engage page.
 rst_epilog = """
-.. |weblate_widget| replace:: `Translate on Weblate <https://hosted.weblate.org/engage/godot-engine{target_locale}/?utm_source=widget>`_
-""".format(
-    target_locale="" if language == "en" else "/" + language,
-)
+.. |weblate_widget| replace:: Translate on Weblate
+"""
 
 # Needed so the table of contents is created for EPUB
 epub_tocscope = 'includehidden'
