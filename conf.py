@@ -19,8 +19,11 @@ extensions = [
     "sphinxext.opengraph",
     "sphinx_copybutton",
     "sphinxcontrib.video",
-    "rst2pdf.pdfbuilder",
 ]
+
+# rst2pdf is not safe for parallel writing, so we only load it when building PDFs
+if "pdf" in sys.argv or "-b pdf" in " ".join(sys.argv):
+    extensions.append("rst2pdf.pdfbuilder")
 
 pdf_documents = [('index', u'BlaziumEngine', u'Blazium Engine Documentation', u'Blazium community, Juan Linietsky, Ariel Manzur and the Godot community'),]
 
