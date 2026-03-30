@@ -14,8 +14,8 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    runs-on: 
-        group: release-builder
+    runs-on:
+      group: release-builder
     steps:
       - name: Checkout
         uses: actions/checkout@v4
