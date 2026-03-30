@@ -1,0 +1,39 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - blazium
+      - blazium-dev
+      - master
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: release-builder
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to DigitalOcean Container Registry
+        run: |
+          mkdir -p ~/.docker
+          echo "${{ secrets.DO_DOCKER_JSON }}" > ~/.docker/config.json
+
+      - name: Build Docker image
+        run: |
+          docker build \
+            -t registry.digitalocean.com/blazium-registry/blazium-docs:latest \
+            -t registry.digitalocean.com/blazium-registry/blazium-docs:${{ github.sha }} \
+            -t registry.digitalocean.com/blazium-registry/blazium-docs:${{ github.ref_name }} \
+            .
+
+      - name: Push Docker image
+        run: |
+          docker push registry.digitalocean.com/blazium-registry/blazium-docs:latest
+          docker push registry.digitalocean.com/blazium-registry/blazium-docs:${{ github.sha }}
+          docker push registry.digitalocean.com/blazium-registry/blazium-docs:${{ github.ref_name }}

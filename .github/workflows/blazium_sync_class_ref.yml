@@ -24,7 +24,7 @@ jobs:
       - name: Checkout the engine repository
         uses: actions/checkout@v4
         with:
-          repository: 'blazium-engine/blazium'
+          repository: 'blazium-games/blazium'
           path: './.engine-src'
           submodules: 'recursive'
           fetch-depth: 0
@@ -39,7 +39,7 @@ jobs:
           git checkout $latest_tag
           hash=$(git rev-parse HEAD)
           hash_short=$(git rev-parse --short HEAD)
-          echo "Checked out blazium-engine/blazium at $hash"
+          echo "Checked out blazium-games/blazium at $hash"
           echo "rev_hash=$hash" >> $GITHUB_OUTPUT
           echo "rev_hash_short=$hash_short" >> $GITHUB_OUTPUT
 
@@ -65,5 +65,5 @@ jobs:
 
           # Configure the pull-request.
           title: '[classref]: Sync with current ${{ env.LATEST_TAG }} release branch (${{ steps.engine.outputs.rev_hash_short }})'
-          body: 'Update Blazium API online class reference to match the engine at release https://github.com/blazium-engine/blazium/commit/${{ steps.engine.outputs.rev_hash }} (`${{ env.LATEST_TAG }}`).'
+          body: 'Update Blazium API online class reference to match the engine at release https://github.com/blazium-games/blazium/commit/${{ steps.engine.outputs.rev_hash }} (`${{ env.LATEST_TAG }}`).'
           labels: 'class-ref-sync'

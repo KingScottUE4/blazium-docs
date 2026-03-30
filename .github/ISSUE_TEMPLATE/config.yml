@@ -6,9 +6,9 @@ contact_links:
     about: Please ask for technical support on one of the other community channels, not here.
 
   - name: Blazium proposals
-    url: https://github.com/blazium-engine/blazium/issues
+    url: https://github.com/blazium-games/blazium/issues
     about: Please submit engine feature proposals on the Blazium engine repository, not here.
 
   - name: Main Blazium repository
-    url: https://github.com/blazium-engine/blazium
+    url: https://github.com/blazium-games/blazium
     about: Report engine bugs on the main Blazium repository
