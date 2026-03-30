@@ -19,10 +19,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DO_API_KEY }}
+
       - name: Log in to DigitalOcean Container Registry
-        run: |
-          mkdir -p ~/.docker
-          echo "${{ secrets.DO_DOCKER_JSON }}" > ~/.docker/config.json
+        run: doctl registry login
 
       - name: Build Docker image
         run: |
