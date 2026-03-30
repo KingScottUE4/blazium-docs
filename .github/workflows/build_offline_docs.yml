@@ -10,7 +10,7 @@ jobs:
   build:
     # Don't run scheduled runs on forks unless the CI_OFFLINE_DOCS_CRON variable is set to 'true'.
     # Manual runs can still be triggered as normal.
-    if: ${{ github.repository_owner == 'godotengine' || github.event_name != 'schedule' || vars.CI_OFFLINE_DOCS_CRON == 'true' }}
+    if: ${{ github.repository_owner == 'blazium-games' || github.event_name != 'schedule' || vars.CI_OFFLINE_DOCS_CRON == 'true' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     strategy:
@@ -39,13 +39,13 @@ jobs:
 
       - name: Install dependencies
         run: |
+          sudo apt-get update
+          sudo apt-get install -y pkg-config libcairo2-dev parallel libwebp7 imagemagick
           python -m venv .venv
           source .venv/bin/activate
           python -m pip install -r requirements.txt
           echo "$VIRTUAL_ENV/bin" >> $GITHUB_PATH
           echo "VIRTUAL_ENV=$VIRTUAL_ENV" >> $GITHUB_ENV
-          sudo apt update
-          sudo apt install parallel libwebp7 imagemagick
 
       - name: Save virtualenv cache
         uses: actions/cache/save@v4
