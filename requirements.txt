@@ -25,3 +25,4 @@ sphinxcontrib-video==0.4.1
 
 # PDF generation support
 rst2pdf
+svglib
