@@ -19,7 +19,10 @@ extensions = [
     "sphinxext.opengraph",
     "sphinx_copybutton",
     "sphinxcontrib.video",
+    "rst2pdf.pdfbuilder",
 ]
+
+pdf_documents = [('index', u'BlaziumEngine', u'Blazium Engine Documentation', u'Blazium community, Juan Linietsky, Ariel Manzur and the Godot community'),]
 
 # Warning when the Sphinx Tabs extension is used with unknown
 # builders (like the dummy builder) - as it doesn't cause errors,

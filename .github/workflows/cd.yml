@@ -14,7 +14,8 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    runs-on: release-builder
+    runs-on: 
+        group: release-builder
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,3 +38,41 @@ jobs:
           docker push registry.digitalocean.com/blazium-registry/blazium-docs:latest
           docker push registry.digitalocean.com/blazium-registry/blazium-docs:${{ github.sha }}
           docker push registry.digitalocean.com/blazium-registry/blazium-docs:${{ github.ref_name }}
+
+      - name: Get Python version
+        id: pythonv
+        run: |
+          echo "PYTHON_VERSION=$(python --version)" >> $GITHUB_OUTPUT
+
+      - name: Restore cached virtualenv
+        uses: actions/cache/restore@v4
+        with:
+          key: venv-${{ runner.os }}-${{ steps.pythonv.outputs.PYTHON_VERSION }}-${{ hashFiles('requirements.txt') }}
+          path: .venv
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          python -m pip install -r requirements.txt
+          echo "$VIRTUAL_ENV/bin" >> $GITHUB_PATH
+          echo "VIRTUAL_ENV=$VIRTUAL_ENV" >> $GITHUB_ENV
+
+      - name: Build EPUB
+        run: |
+          source .venv/bin/activate
+          make epub
+
+      - name: Build PDF
+        run: |
+          source .venv/bin/activate
+          sphinx-build -b pdf . _build/pdf
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Documentation - ${{ github.ref_name }}
+          tag_name: docs-${{ github.ref_name }}-${{ github.sha }}
+          files: |
+            _build/epub/BlaziumEngine.epub
+            _build/pdf/BlaziumEngine.pdf
