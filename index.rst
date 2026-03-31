@@ -45,7 +45,7 @@ by letting us know!
 
 We haven't set up translated docs yet, so either submit an issue or pull request on the `GitHub repository <https://github.com/blazium-engine/blazium-docs/issues>`_
 or check the `Godot translated documentation <https://hosted.weblate.org/engage/godot-engine/>`_.
-Help them and us translate docs into your language over there or talk to us on the on the
+Help them and us translate docs into your language over there or talk to us on the
 `Blazium Discord <https://chat.blazium.app/>`_!
 
 .. .. centered:: |weblate_widget|
