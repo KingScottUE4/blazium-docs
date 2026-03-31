@@ -13,6 +13,9 @@ sphinx_rtd_theme==3.0.2
 
 # Code tabs extension to display codeblocks in different languages as tabs.
 sphinx-tabs==3.4.7
+rst2pdf==0.102
+svglib==1.5.1
+matplotlib==3.8.4
 # Adds a 'copy' button to the right of codeblocks.
 sphinx-copybutton==0.5.2
 # Custom 404 error page (more useful than the default).
