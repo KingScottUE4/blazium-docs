@@ -38,6 +38,8 @@ Properties
    +-------------------------------------+------------------------------------------------------------+-----------+
    | :ref:`int<class_int>`               | :ref:`order_id<class_LobbyPeer_property_order_id>`         | ``-1``    |
    +-------------------------------------+------------------------------------------------------------+-----------+
+   | :ref:`String<class_String>`         | :ref:`platform<class_LobbyPeer_property_platform>`         | ``""``    |
+   +-------------------------------------+------------------------------------------------------------+-----------+
    | :ref:`bool<class_bool>`             | :ref:`ready<class_LobbyPeer_property_ready>`               | ``false`` |
    +-------------------------------------+------------------------------------------------------------+-----------+
    | :ref:`Dictionary<class_Dictionary>` | :ref:`user_data<class_LobbyPeer_property_user_data>`       | ``{}``    |
@@ -111,6 +113,22 @@ Identifier of the peer.
 - :ref:`int<class_int>` **get_order_id**\ (\ )
 
 Order when the peer joined the lobby server.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_LobbyPeer_property_platform:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **platform** = ``""`` :ref:`🔗<class_LobbyPeer_property_platform>`
+
+.. rst-class:: classref-property-setget
+
+- :ref:`String<class_String>` **get_platform**\ (\ )
+
+Platform of the peer.
 
 .. rst-class:: classref-item-separator
 

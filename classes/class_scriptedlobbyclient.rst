@@ -145,11 +145,17 @@ Methods
    +-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>`         | :ref:`quick_join<class_ScriptedLobbyClient_method_quick_join>`\ (\ title\: :ref:`String<class_String>`, tags\: :ref:`Dictionary<class_Dictionary>` = {}, max_players\: :ref:`int<class_int>` = 4\ )                                                                                    |
    +-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`                 | :ref:`send_chat_message<class_ScriptedLobbyClient_method_send_chat_message>`\ (\ chat_message\: :ref:`String<class_String>`\ )                                                                                                                                                         |
+   | :ref:`LobbyResponse<class_LobbyResponse>`                 | :ref:`send_chat_message<class_ScriptedLobbyClient_method_send_chat_message>`\ (\ chat_message\: :ref:`String<class_String>`, chat_metadata\: :ref:`Dictionary<class_Dictionary>` = {}\ )                                                                                               |
    +-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`LobbyResponse<class_LobbyResponse>`                 | :ref:`set_lobby_ready<class_ScriptedLobbyClient_method_set_lobby_ready>`\ (\ ready\: :ref:`bool<class_bool>`\ )                                                                                                                                                                        |
    +-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`LobbyResponse<class_LobbyResponse>`                 | :ref:`set_lobby_sealed<class_ScriptedLobbyClient_method_set_lobby_sealed>`\ (\ seal\: :ref:`bool<class_bool>`\ )                                                                                                                                                                       |
+   +-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>`         | :ref:`set_max_players<class_ScriptedLobbyClient_method_set_max_players>`\ (\ max_players\: :ref:`int<class_int>`\ )                                                                                                                                                                    |
+   +-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>`         | :ref:`set_password<class_ScriptedLobbyClient_method_set_password>`\ (\ password\: :ref:`String<class_String>` = ""\ )                                                                                                                                                                  |
+   +-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>`         | :ref:`set_title<class_ScriptedLobbyClient_method_set_title>`\ (\ title\: :ref:`String<class_String>`\ )                                                                                                                                                                                |
    +-----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
@@ -209,6 +215,18 @@ Signal generated after a lobby is created.
 
 ----
 
+.. _class_ScriptedLobbyClient_signal_lobby_hosted:
+
+.. rst-class:: classref-signal
+
+**lobby_hosted**\ (\ host\: :ref:`LobbyPeer<class_LobbyPeer>`\ ) :ref:`🔗<class_ScriptedLobbyClient_signal_lobby_hosted>`
+
+Signal generated after a lobby host is changed. If there is no host, a peer without id will be sent.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ScriptedLobbyClient_signal_lobby_joined:
 
 .. rst-class:: classref-signal
@@ -245,6 +263,30 @@ Signal generated after a notification is received.
 
 ----
 
+.. _class_ScriptedLobbyClient_signal_lobby_passworded:
+
+.. rst-class:: classref-signal
+
+**lobby_passworded**\ (\ password_protected\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_ScriptedLobbyClient_signal_lobby_passworded>`
+
+Signal generated after the host changes the lobby password.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ScriptedLobbyClient_signal_lobby_resized:
+
+.. rst-class:: classref-signal
+
+**lobby_resized**\ (\ max_players\: :ref:`int<class_int>`\ ) :ref:`🔗<class_ScriptedLobbyClient_signal_lobby_resized>`
+
+Signal generated after the host changes the lobby max players.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ScriptedLobbyClient_signal_lobby_sealed:
 
 .. rst-class:: classref-signal
@@ -264,6 +306,18 @@ Signal generated after the host seals the lobby.
 **lobby_tagged**\ (\ tags\: :ref:`Dictionary<class_Dictionary>`\ ) :ref:`🔗<class_ScriptedLobbyClient_signal_lobby_tagged>`
 
 Signal generated after the host updated the tags of the lobby
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ScriptedLobbyClient_signal_lobby_titled:
+
+.. rst-class:: classref-signal
+
+**lobby_titled**\ (\ title\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ScriptedLobbyClient_signal_lobby_titled>`
+
+Signal generated after the host changes the lobby title.
 
 .. rst-class:: classref-item-separator
 
@@ -321,7 +375,7 @@ Signal generated after a peer leaves the lobby.
 
 .. rst-class:: classref-signal
 
-**peer_messaged**\ (\ peer\: :ref:`LobbyPeer<class_LobbyPeer>`, chat_message\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ScriptedLobbyClient_signal_peer_messaged>`
+**peer_messaged**\ (\ peer\: :ref:`LobbyPeer<class_LobbyPeer>`, chat_message\: :ref:`String<class_String>`, chat_metadata\: :ref:`Dictionary<class_Dictionary>`\ ) :ref:`🔗<class_ScriptedLobbyClient_signal_peer_messaged>`
 
 Signal generated after a peer sends a chat message.
 
@@ -795,7 +849,7 @@ Generates either :ref:`lobby_joined<class_ScriptedLobbyClient_signal_lobby_joine
 
 .. rst-class:: classref-method
 
-:ref:`LobbyResponse<class_LobbyResponse>` **send_chat_message**\ (\ chat_message\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ScriptedLobbyClient_method_send_chat_message>`
+:ref:`LobbyResponse<class_LobbyResponse>` **send_chat_message**\ (\ chat_message\: :ref:`String<class_String>`, chat_metadata\: :ref:`Dictionary<class_Dictionary>` = {}\ ) :ref:`🔗<class_ScriptedLobbyClient_method_send_chat_message>`
 
 Send a chat message. Only works if you are in a lobby.
 
@@ -840,6 +894,60 @@ Needs :ref:`connect_to_server()<class_ScriptedLobbyClient_method_connect_to_serv
 Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`lobby_sealed<class_ScriptedLobbyClient_signal_lobby_sealed>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ScriptedLobbyClient_method_set_max_players:
+
+.. rst-class:: classref-method
+
+:ref:`ViewLobbyResponse<class_ViewLobbyResponse>` **set_max_players**\ (\ max_players\: :ref:`int<class_int>`\ ) :ref:`🔗<class_ScriptedLobbyClient_method_set_max_players>`
+
+Set the max players of the lobby. You need to be the host to do this.
+
+Needs :ref:`connect_to_server()<class_ScriptedLobbyClient_method_connect_to_server>` to be called first.
+
+Returns a :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` object that has a :ref:`ViewLobbyResponse.finished<class_ViewLobbyResponse_signal_finished>` signal that is emitted when finished.
+
+Generates :ref:`lobby_resized<class_ScriptedLobbyClient_signal_lobby_resized>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ScriptedLobbyClient_method_set_password:
+
+.. rst-class:: classref-method
+
+:ref:`ViewLobbyResponse<class_ViewLobbyResponse>` **set_password**\ (\ password\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_ScriptedLobbyClient_method_set_password>`
+
+Set the password of the lobby. You need to be the host to do this.
+
+Needs :ref:`connect_to_server()<class_ScriptedLobbyClient_method_connect_to_server>` to be called first.
+
+Returns a :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` object that has a :ref:`ViewLobbyResponse.finished<class_ViewLobbyResponse_signal_finished>` signal that is emitted when finished.
+
+Generates :ref:`lobby_passworded<class_ScriptedLobbyClient_signal_lobby_passworded>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ScriptedLobbyClient_method_set_title:
+
+.. rst-class:: classref-method
+
+:ref:`ViewLobbyResponse<class_ViewLobbyResponse>` **set_title**\ (\ title\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ScriptedLobbyClient_method_set_title>`
+
+Set the title of the lobby. You need to be the host to do this.
+
+Needs :ref:`connect_to_server()<class_ScriptedLobbyClient_method_connect_to_server>` to be called first.
+
+Returns a :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` object that has a :ref:`ViewLobbyResponse.finished<class_ViewLobbyResponse_signal_finished>` signal that is emitted when finished.
+
+Generates :ref:`lobby_titled<class_ScriptedLobbyClient_signal_lobby_titled>`.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

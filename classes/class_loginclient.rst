@@ -65,21 +65,21 @@ Methods
 .. table::
    :widths: auto
 
-   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LoginConnectResponse<class_LoginConnectResponse>`           | :ref:`connect_to_server<class_LoginClient_method_connect_to_server>`\ (\ )                                                                                                                            |
-   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | |void|                                                            | :ref:`disconnect_from_server<class_LoginClient_method_disconnect_from_server>`\ (\ )                                                                                                                  |
-   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LoginRefreshTokenResponse<class_LoginRefreshTokenResponse>` | :ref:`refresh_jwt_token<class_LoginClient_method_refresh_jwt_token>`\ (\ refresh_token\: :ref:`String<class_String>`\ )                                                                               |
-   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LoginAccessTokenResponse<class_LoginAccessTokenResponse>`   | :ref:`request_access_token<class_LoginClient_method_request_access_token>`\ (\ login_type\: :ref:`String<class_String>`, auth_id\: :ref:`String<class_String>`, code\: :ref:`String<class_String>`\ ) |
-   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LoginIDResponse<class_LoginIDResponse>`                     | :ref:`request_auth_id<class_LoginClient_method_request_auth_id>`\ (\ login_type\: :ref:`String<class_String>`\ )                                                                                      |
-   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LoginURLResponse<class_LoginURLResponse>`                   | :ref:`request_login_info<class_LoginClient_method_request_login_info>`\ (\ login_type\: :ref:`String<class_String>`\ )                                                                                |
-   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LoginVerifyTokenResponse<class_LoginVerifyTokenResponse>`   | :ref:`verify_jwt_token<class_LoginClient_method_verify_jwt_token>`\ (\ jwt_token\: :ref:`String<class_String>`\ )                                                                                     |
-   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LoginConnectResponse<class_LoginConnectResponse>`         | :ref:`connect_to_server<class_LoginClient_method_connect_to_server>`\ (\ )                                                                                                            |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                          | :ref:`disconnect_from_server<class_LoginClient_method_disconnect_from_server>`\ (\ )                                                                                                  |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LoginAuthResponse<class_LoginAuthResponse>`               | :ref:`request_auth<class_LoginClient_method_request_auth>`\ (\ login_type\: :ref:`String<class_String>`, auth_id\: :ref:`String<class_String>`, code\: :ref:`String<class_String>`\ ) |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LoginIDResponse<class_LoginIDResponse>`                   | :ref:`request_auth_id<class_LoginClient_method_request_auth_id>`\ (\ login_type\: :ref:`String<class_String>`\ )                                                                      |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LoginURLResponse<class_LoginURLResponse>`                 | :ref:`request_login_info<class_LoginClient_method_request_login_info>`\ (\ login_type\: :ref:`String<class_String>`\ )                                                                |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LoginAuthResponse<class_LoginAuthResponse>`               | :ref:`request_steam_auth<class_LoginClient_method_request_steam_auth>`\ (\ auth_id\: :ref:`String<class_String>`, steam_ticket\: :ref:`String<class_String>`\ )                       |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LoginVerifyTokenResponse<class_LoginVerifyTokenResponse>` | :ref:`verify_jwt_token<class_LoginClient_method_verify_jwt_token>`\ (\ jwt_token\: :ref:`String<class_String>`\ )                                                                     |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -285,33 +285,19 @@ Generates :ref:`disconnected_from_server<class_LoginClient_signal_disconnected_f
 
 ----
 
-.. _class_LoginClient_method_refresh_jwt_token:
+.. _class_LoginClient_method_request_auth:
 
 .. rst-class:: classref-method
 
-:ref:`LoginRefreshTokenResponse<class_LoginRefreshTokenResponse>` **refresh_jwt_token**\ (\ refresh_token\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LoginClient_method_refresh_jwt_token>`
+:ref:`LoginAuthResponse<class_LoginAuthResponse>` **request_auth**\ (\ login_type\: :ref:`String<class_String>`, auth_id\: :ref:`String<class_String>`, code\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LoginClient_method_request_auth>`
 
-Refresh the jwt token using the refresh token.
-
-Needs :ref:`connect_to_server()<class_LoginClient_method_connect_to_server>` to be called first.
-
-Returns a :ref:`LoginRefreshTokenResponse<class_LoginRefreshTokenResponse>` object that has a :ref:`LoginRefreshTokenResponse.finished<class_LoginRefreshTokenResponse_signal_finished>` signal that is emitted when finished.
-
-.. rst-class:: classref-item-separator
-
-----
-
-.. _class_LoginClient_method_request_access_token:
-
-.. rst-class:: classref-method
-
-:ref:`LoginAccessTokenResponse<class_LoginAccessTokenResponse>` **request_access_token**\ (\ login_type\: :ref:`String<class_String>`, auth_id\: :ref:`String<class_String>`, code\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LoginClient_method_request_access_token>`
-
-Request login auth id using the login type specified, auth_id and access code.
+Request login auth jwt using the login type specified, auth_id and access code.
 
 Needs :ref:`connect_to_server()<class_LoginClient_method_connect_to_server>` to be called first.
 
-Returns a :ref:`LoginAccessTokenResponse<class_LoginAccessTokenResponse>` object that has a :ref:`LoginAccessTokenResponse.finished<class_LoginAccessTokenResponse_signal_finished>` signal that is emitted when finished.
+Returns a :ref:`LoginAuthResponse<class_LoginAuthResponse>` object that has a :ref:`LoginAuthResponse.finished<class_LoginAuthResponse_signal_finished>` signal that is emitted when finished.
+
+Generates :ref:`received_jwt<class_LoginClient_signal_received_jwt>` when a jwt is received.
 
 .. rst-class:: classref-item-separator
 
@@ -344,6 +330,24 @@ Request login info using the login type specified.
 Needs :ref:`connect_to_server()<class_LoginClient_method_connect_to_server>` to be called first.
 
 Returns a :ref:`LoginURLResponse<class_LoginURLResponse>` object that has a :ref:`LoginURLResponse.finished<class_LoginURLResponse_signal_finished>` signal that is emitted when finished.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_LoginClient_method_request_steam_auth:
+
+.. rst-class:: classref-method
+
+:ref:`LoginAuthResponse<class_LoginAuthResponse>` **request_steam_auth**\ (\ auth_id\: :ref:`String<class_String>`, steam_ticket\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LoginClient_method_request_steam_auth>`
+
+Request login auth jwt using the auth_id and steam_ticket.
+
+Needs :ref:`connect_to_server()<class_LoginClient_method_connect_to_server>` to be called first.
+
+Returns a :ref:`LoginAuthResponse<class_LoginAuthResponse>` object that has a :ref:`LoginAuthResponse.finished<class_LoginAuthResponse_signal_finished>` signal that is emitted when finished.
+
+Generates :ref:`received_jwt<class_LoginClient_signal_received_jwt>` when a jwt is received.
 
 .. rst-class:: classref-item-separator
 

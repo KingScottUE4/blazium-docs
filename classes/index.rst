@@ -844,14 +844,12 @@ Other objects
     class_lightmapperrd
     class_lobbyresponse
     class_lobbyresult
-    class_loginaccesstokenresponse
-    class_loginaccesstokenresult
+    class_loginauthresponse
+    class_loginauthresult
     class_loginconnectresponse
     class_loginconnectresult
     class_loginidresponse
     class_loginidresult
-    class_loginrefreshtokenresponse
-    class_loginrefreshtokenresult
     class_loginurlresponse
     class_loginurlresult
     class_loginverifytokenresponse
