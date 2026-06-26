@@ -34,9 +34,10 @@ jobs:
         run: |
           cd ./.engine-src
           git fetch --tags
-          latest_tag=$(git tag -l "v*.*.*" | sed "s/v*.*.*-//g" | sort -V | tail -n 1)
+          latest_tag=$(git tag -l 'v*.*.*' | grep -Ev 'nightly|alpha|beta|rc' | sort -V | tail -n 1)
           echo "LATEST_TAG=$latest_tag" >> $GITHUB_ENV
           git checkout $latest_tag
+          git submodule update --init --recursive
           hash=$(git rev-parse HEAD)
           hash_short=$(git rev-parse --short HEAD)
           echo "Checked out blazium-games/blazium at $hash"
@@ -49,6 +50,10 @@ jobs:
 
       - name: Build new documentation
         run: |
+          test -f ./.engine-src/modules/blazium_sdk/doc_classes/ENV.xml || \
+          test -f ./.engine-src/modules/dotenv/doc_classes/ENV.xml
+          test -f ./.engine-src/modules/blazium_sdk/doc_classes/JWT.xml || \
+          test -f ./.engine-src/modules/jwttool/doc_classes/JWT.xml
           ./.engine-src/doc/tools/make_rst.py --color -o ./classes -l en ./.engine-src/doc/classes ./.engine-src/modules ./.engine-src/platform
 
       - name: Submit a pull-request
