@@ -60,6 +60,18 @@ Methods
 Signals
 -------
 
+.. _class_EditorFileSystem_signal_csv_import_choice_needed:
+
+.. rst-class:: classref-signal
+
+**csv_import_choice_needed**\ (\ path\: :ref:`String<class_String>`\ ) :ref:`🔗<class_EditorFileSystem_signal_csv_import_choice_needed>`
+
+Emitted when a CSV file is detected during import and the user must choose how to handle it (translation, generic CSV, keep, or skip).
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorFileSystem_signal_filesystem_changed:
 
 .. rst-class:: classref-signal

@@ -48,6 +48,8 @@ Methods
    +-------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                                  | :ref:`clipboard_set_primary<class_DisplayServer_method_clipboard_set_primary>`\ (\ clipboard_primary\: :ref:`String<class_String>`\ )                                                                                                                                                                                                                                                                                                                                                                                                                               |
    +-------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                                                 | :ref:`color_picker<class_DisplayServer_method_color_picker>`\ (\ callback\: :ref:`Callable<class_Callable>`\ )                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+   +-------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                                                   | :ref:`create_status_indicator<class_DisplayServer_method_create_status_indicator>`\ (\ icon\: :ref:`Texture2D<class_Texture2D>`, tooltip\: :ref:`String<class_String>`, callback\: :ref:`Callable<class_Callable>`\ )                                                                                                                                                                                                                                                                                                                                               |
    +-------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`CursorShape<enum_DisplayServer_CursorShape>`                      | :ref:`cursor_get_shape<class_DisplayServer_method_cursor_get_shape>`\ (\ ) |const|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -678,6 +680,22 @@ Native file selection dialog supports MIME types as filters.
 
 Display server supports system emoji and symbol picker. **Windows, macOS**
 
+.. _class_DisplayServer_constant_FEATURE_NATIVE_COLOR_PICKER:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`Feature<enum_DisplayServer_Feature>` **FEATURE_NATIVE_COLOR_PICKER** = ``32``
+
+Display server supports native color picker. **Linux (X11/Wayland)**
+
+.. _class_DisplayServer_constant_FEATURE_SELF_FITTING_WINDOWS:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`Feature<enum_DisplayServer_Feature>` **FEATURE_SELF_FITTING_WINDOWS** = ``33``
+
+Display server automatically fits popups according to the screen boundaries. Window nodes should not attempt to do that themselves.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -1264,11 +1282,19 @@ Windows is excluded from screenshots taken by :ref:`screen_get_image()<class_Dis
 
 \ **Note:** Setting this flag will **NOT** prevent other apps from capturing an image, it should not be used as a security measure.
 
+.. _class_DisplayServer_constant_WINDOW_FLAG_POPUP_WM_HINT:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`WindowFlags<enum_DisplayServer_WindowFlags>` **WINDOW_FLAG_POPUP_WM_HINT** = ``10``
+
+Signals the window manager that this window is supposed to be an implementation-defined "popup" (usually a floating, borderless, untileable and immovable child window).
+
 .. _class_DisplayServer_constant_WINDOW_FLAG_MAX:
 
 .. rst-class:: classref-enumeration-constant
 
-:ref:`WindowFlags<enum_DisplayServer_WindowFlags>` **WINDOW_FLAG_MAX** = ``10``
+:ref:`WindowFlags<enum_DisplayServer_WindowFlags>` **WINDOW_FLAG_MAX** = ``11``
 
 Max value of the :ref:`WindowFlags<enum_DisplayServer_WindowFlags>`.
 
@@ -1351,6 +1377,16 @@ Sent when the window is moved to the display with different DPI, or display DPI 
 Sent when the window title bar decoration is changed (e.g. :ref:`WINDOW_FLAG_EXTEND_TO_TITLE<class_DisplayServer_constant_WINDOW_FLAG_EXTEND_TO_TITLE>` is set or window entered/exited full screen mode).
 
 \ **Note:** This flag is implemented only on macOS.
+
+.. _class_DisplayServer_constant_WINDOW_EVENT_FORCE_CLOSE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`WindowEvent<enum_DisplayServer_WindowEvent>` **WINDOW_EVENT_FORCE_CLOSE** = ``8``
+
+Sent when the window has been forcibly closed by the Display Server. The window shall immediately hide and clean any internal rendering references.
+
+\ **Note:** This flag is implemented only on Linux (Wayland).
 
 .. rst-class:: classref-item-separator
 
@@ -1806,6 +1842,24 @@ Sets the user's `primary <https://unix.stackexchange.com/questions/139191/whats-
 
 ----
 
+.. _class_DisplayServer_method_color_picker:
+
+.. rst-class:: classref-method
+
+:ref:`bool<class_bool>` **color_picker**\ (\ callback\: :ref:`Callable<class_Callable>`\ ) :ref:`🔗<class_DisplayServer_method_color_picker>`
+
+Displays OS native color picker.
+
+Callbacks have the following arguments: ``status: bool, color: Color``.
+
+\ **Note:** This method is implemented if the display server has the :ref:`FEATURE_NATIVE_COLOR_PICKER<class_DisplayServer_constant_FEATURE_NATIVE_COLOR_PICKER>` feature.
+
+\ **Note:** This method is only implemented on Linux (X11/Wayland).
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_DisplayServer_method_create_status_indicator:
 
 .. rst-class:: classref-method
@@ -1998,7 +2052,7 @@ Forces window manager processing while ignoring all :ref:`InputEvent<class_Input
 
 Returns OS theme accent color. Returns ``Color(0, 0, 0, 0)``, if accent color is unknown.
 
-\ **Note:** This method is implemented on macOS, Windows, and Android.
+\ **Note:** This method is implemented on macOS, Windows, Android, and Linux (X11/Wayland).
 
 .. rst-class:: classref-item-separator
 
@@ -3865,8 +3919,6 @@ Note that Godot depends on system libraries for text-to-speech functionality. Th
 
 \ **Note:** This method is implemented on Android, iOS, Web, Linux (X11/Wayland), macOS, and Windows.
 
-\ **Note:** :ref:`ProjectSettings.audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>` should be ``true`` to use text-to-speech.
-
 .. rst-class:: classref-item-separator
 
 ----
@@ -3880,8 +3932,6 @@ Note that Godot depends on system libraries for text-to-speech functionality. Th
 Returns an :ref:`PackedStringArray<class_PackedStringArray>` of voice identifiers for the ``language``.
 
 \ **Note:** This method is implemented on Android, iOS, Web, Linux (X11/Wayland), macOS, and Windows.
-
-\ **Note:** :ref:`ProjectSettings.audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>` should be ``true`` to use text-to-speech.
 
 .. rst-class:: classref-item-separator
 
@@ -3897,8 +3947,6 @@ Returns ``true`` if the synthesizer is in a paused state.
 
 \ **Note:** This method is implemented on Android, iOS, Web, Linux (X11/Wayland), macOS, and Windows.
 
-\ **Note:** :ref:`ProjectSettings.audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>` should be ``true`` to use text-to-speech.
-
 .. rst-class:: classref-item-separator
 
 ----
@@ -3912,8 +3960,6 @@ Returns ``true`` if the synthesizer is in a paused state.
 Returns ``true`` if the synthesizer is generating speech, or have utterance waiting in the queue.
 
 \ **Note:** This method is implemented on Android, iOS, Web, Linux (X11/Wayland), macOS, and Windows.
-
-\ **Note:** :ref:`ProjectSettings.audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>` should be ``true`` to use text-to-speech.
 
 .. rst-class:: classref-item-separator
 
@@ -3929,8 +3975,6 @@ Puts the synthesizer into a paused state.
 
 \ **Note:** This method is implemented on Android, iOS, Web, Linux (X11/Wayland), macOS, and Windows.
 
-\ **Note:** :ref:`ProjectSettings.audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>` should be ``true`` to use text-to-speech.
-
 .. rst-class:: classref-item-separator
 
 ----
@@ -3944,8 +3988,6 @@ Puts the synthesizer into a paused state.
 Resumes the synthesizer if it was paused.
 
 \ **Note:** This method is implemented on Android, iOS, Web, Linux (X11/Wayland), macOS, and Windows.
-
-\ **Note:** :ref:`ProjectSettings.audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>` should be ``true`` to use text-to-speech.
 
 .. rst-class:: classref-item-separator
 
@@ -3966,8 +4008,6 @@ Adds a callback, which is called when the utterance has started, finished, cance
 \ **Note:** The granularity of the boundary callbacks is engine dependent.
 
 \ **Note:** This method is implemented on Android, iOS, Web, Linux (X11/Wayland), macOS, and Windows.
-
-\ **Note:** :ref:`ProjectSettings.audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>` should be ``true`` to use text-to-speech.
 
 .. rst-class:: classref-item-separator
 
@@ -3997,8 +4037,6 @@ Adds an utterance to the queue. If ``interrupt`` is ``true``, the queue is clear
 
 \ **Note:** This method is implemented on Android, iOS, Web, Linux (X11/Wayland), macOS, and Windows.
 
-\ **Note:** :ref:`ProjectSettings.audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>` should be ``true`` to use text-to-speech.
-
 .. rst-class:: classref-item-separator
 
 ----
@@ -4012,8 +4050,6 @@ Adds an utterance to the queue. If ``interrupt`` is ``true``, the queue is clear
 Stops synthesis in progress and removes all utterances from the queue.
 
 \ **Note:** This method is implemented on Android, iOS, Web, Linux (X11/Linux), macOS, and Windows.
-
-\ **Note:** :ref:`ProjectSettings.audio/general/text_to_speech<class_ProjectSettings_property_audio/general/text_to_speech>` should be ``true`` to use text-to-speech.
 
 .. rst-class:: classref-item-separator
 

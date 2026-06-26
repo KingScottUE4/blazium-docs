@@ -88,9 +88,13 @@ Methods
    +---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                | :ref:`register_route<class_HTTPServer_method_register_route>`\ (\ method\: :ref:`String<class_String>`, path\: :ref:`String<class_String>`, callback\: :ref:`Callable<class_Callable>`\ )                                                                               |
    +---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Error<enum_@GlobalScope_Error>` | :ref:`send_sse_comment<class_HTTPServer_method_send_sse_comment>`\ (\ connection_id\: :ref:`int<class_int>`, comment\: :ref:`String<class_String>` = ""\ )                                                                                                              |
+   +---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Error<enum_@GlobalScope_Error>` | :ref:`send_sse_data<class_HTTPServer_method_send_sse_data>`\ (\ connection_id\: :ref:`int<class_int>`, data\: :ref:`String<class_String>`\ )                                                                                                                            |
    +---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Error<enum_@GlobalScope_Error>` | :ref:`send_sse_event<class_HTTPServer_method_send_sse_event>`\ (\ connection_id\: :ref:`int<class_int>`, event\: :ref:`String<class_String>`, data\: :ref:`String<class_String>`\ )                                                                                     |
+   | :ref:`Error<enum_@GlobalScope_Error>` | :ref:`send_sse_event<class_HTTPServer_method_send_sse_event>`\ (\ connection_id\: :ref:`int<class_int>`, event\: :ref:`String<class_String>`, data\: :ref:`String<class_String>`, event_id\: :ref:`String<class_String>` = ""\ )                                        |
+   +---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Error<enum_@GlobalScope_Error>` | :ref:`send_sse_retry<class_HTTPServer_method_send_sse_retry>`\ (\ connection_id\: :ref:`int<class_int>`, retry_ms\: :ref:`int<class_int>`\ )                                                                                                                            |
    +---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                | :ref:`set_cors_enabled<class_HTTPServer_method_set_cors_enabled>`\ (\ enabled\: :ref:`bool<class_bool>`\ )                                                                                                                                                              |
    +---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -328,6 +332,20 @@ Supported methods: GET, POST, PUT, DELETE, PATCH, OPTIONS, HEAD.
 
 ----
 
+.. _class_HTTPServer_method_send_sse_comment:
+
+.. rst-class:: classref-method
+
+:ref:`Error<enum_@GlobalScope_Error>` **send_sse_comment**\ (\ connection_id\: :ref:`int<class_int>`, comment\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_HTTPServer_method_send_sse_comment>`
+
+.. container:: contribute
+
+	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_HTTPServer_method_send_sse_data:
 
 .. rst-class:: classref-method
@@ -344,11 +362,25 @@ Sends data to a Server-Sent Events connection without specifying an event type. 
 
 .. rst-class:: classref-method
 
-:ref:`Error<enum_@GlobalScope_Error>` **send_sse_event**\ (\ connection_id\: :ref:`int<class_int>`, event\: :ref:`String<class_String>`, data\: :ref:`String<class_String>`\ ) :ref:`🔗<class_HTTPServer_method_send_sse_event>`
+:ref:`Error<enum_@GlobalScope_Error>` **send_sse_event**\ (\ connection_id\: :ref:`int<class_int>`, event\: :ref:`String<class_String>`, data\: :ref:`String<class_String>`, event_id\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_HTTPServer_method_send_sse_event>`
 
 Sends a Server-Sent Event to the connection identified by ``connection_id``. The ``event`` specifies the event type, and ``data`` contains the event payload.
 
 Multi-line data is automatically formatted according to the SSE specification. Returns :ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` on success.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_HTTPServer_method_send_sse_retry:
+
+.. rst-class:: classref-method
+
+:ref:`Error<enum_@GlobalScope_Error>` **send_sse_retry**\ (\ connection_id\: :ref:`int<class_int>`, retry_ms\: :ref:`int<class_int>`\ ) :ref:`🔗<class_HTTPServer_method_send_sse_retry>`
+
+.. container:: contribute
+
+	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
 
 .. rst-class:: classref-item-separator
 

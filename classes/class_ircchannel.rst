@@ -94,9 +94,7 @@ Property Descriptions
 - |void| **set_modes**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_modes**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+String representing the active channel modes.
 
 .. rst-class:: classref-item-separator
 
@@ -113,9 +111,7 @@ Property Descriptions
 - |void| **set_name**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_name**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Name of the IRC channel.
 
 .. rst-class:: classref-item-separator
 
@@ -132,9 +128,7 @@ Property Descriptions
 - |void| **set_topic**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_topic**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Current topic of the channel.
 
 .. rst-class:: classref-item-separator
 
@@ -151,9 +145,7 @@ Property Descriptions
 - |void| **set_topic_setter**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_topic_setter**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Nickname of the user who last set the channel topic.
 
 .. rst-class:: classref-item-separator
 
@@ -170,9 +162,7 @@ Property Descriptions
 - |void| **set_topic_time**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_topic_time**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Unix timestamp indicating when the topic was last set.
 
 .. rst-class:: classref-section-separator
 

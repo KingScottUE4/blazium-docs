@@ -12,7 +12,7 @@ EditorPlugin
 
 **Inherits:** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-**Inherited By:** :ref:`GridMapEditorPlugin<class_GridMapEditorPlugin>`
+**Inherited By:** :ref:`GridMapEditorPlugin<class_GridMapEditorPlugin>`, :ref:`MultiuserEditorPlugin<class_MultiuserEditorPlugin>`, :ref:`SteamEditorPlugin<class_SteamEditorPlugin>`, :ref:`XboxEditorPlugin<class_XboxEditorPlugin>`
 
 Used by the editor to extend its functionality.
 

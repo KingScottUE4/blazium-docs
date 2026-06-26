@@ -84,9 +84,7 @@ Property Descriptions
 - |void| **set_account**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_account**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Services account name associated with the user.
 
 .. rst-class:: classref-item-separator
 
@@ -103,9 +101,7 @@ Property Descriptions
 - |void| **set_away_message**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_away_message**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Message explaining why the user is marked as away.
 
 .. rst-class:: classref-item-separator
 
@@ -122,9 +118,7 @@ Property Descriptions
 - |void| **set_hostname**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_hostname**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Hostname of the IRC user.
 
 .. rst-class:: classref-item-separator
 
@@ -141,9 +135,7 @@ Property Descriptions
 - |void| **set_is_away**\ (\ value\: :ref:`bool<class_bool>`\ )
 - :ref:`bool<class_bool>` **get_is_away**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Whether the user is currently marked as away.
 
 .. rst-class:: classref-item-separator
 
@@ -160,9 +152,7 @@ Property Descriptions
 - |void| **set_nick**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_nick**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Nickname of the IRC user.
 
 .. rst-class:: classref-item-separator
 
@@ -179,9 +169,7 @@ Property Descriptions
 - |void| **set_realname**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_realname**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Real name (gecos field) of the IRC user.
 
 .. rst-class:: classref-item-separator
 
@@ -198,9 +186,7 @@ Property Descriptions
 - |void| **set_username**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_username**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Username (ident) of the IRC user.
 
 .. rst-class:: classref-section-separator
 

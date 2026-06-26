@@ -1335,11 +1335,7 @@ Subscribe to all standard events (excludes high-volume events).
 
 **OBS_REQUEST_STATUS_UNKNOWN** = ``0`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_UNKNOWN>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Unknown request status.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_NO_ERROR:
 
@@ -1347,11 +1343,7 @@ Subscribe to all standard events (excludes high-volume events).
 
 **OBS_REQUEST_STATUS_NO_ERROR** = ``10`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_NO_ERROR>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+No error occurred, but no explicit success confirmation.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_SUCCESS:
 
@@ -1367,11 +1359,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_MISSING_REQUEST_TYPE** = ``203`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_MISSING_REQUEST_TYPE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The request did not include a request type.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_UNKNOWN_REQUEST_TYPE:
 
@@ -1379,11 +1367,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_UNKNOWN_REQUEST_TYPE** = ``204`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_UNKNOWN_REQUEST_TYPE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The specified request type is not recognized.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_GENERIC_ERROR:
 
@@ -1391,11 +1375,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_GENERIC_ERROR** = ``205`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_GENERIC_ERROR>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A generic error occurred while processing the request.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_UNSUPPORTED_REQUEST_BATCH_EXECUTION_TYPE:
 
@@ -1403,11 +1383,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_UNSUPPORTED_REQUEST_BATCH_EXECUTION_TYPE** = ``206`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_UNSUPPORTED_REQUEST_BATCH_EXECUTION_TYPE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The batch execution type provided is not supported.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_NOT_READY:
 
@@ -1415,11 +1391,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_NOT_READY** = ``207`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_NOT_READY>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The system is not ready to process the request.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_MISSING_REQUEST_FIELD:
 
@@ -1427,11 +1399,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_MISSING_REQUEST_FIELD** = ``300`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_MISSING_REQUEST_FIELD>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A required field is missing from the request.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_MISSING_REQUEST_DATA:
 
@@ -1439,11 +1407,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_MISSING_REQUEST_DATA** = ``301`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_MISSING_REQUEST_DATA>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The request is missing required data payload.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_REQUEST_FIELD:
 
@@ -1451,11 +1415,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_INVALID_REQUEST_FIELD** = ``400`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_REQUEST_FIELD>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A request field contains an invalid value.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_REQUEST_FIELD_TYPE:
 
@@ -1463,11 +1423,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_INVALID_REQUEST_FIELD_TYPE** = ``401`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_REQUEST_FIELD_TYPE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A request field has an invalid data type.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_REQUEST_FIELD_OUT_OF_RANGE:
 
@@ -1475,11 +1431,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_REQUEST_FIELD_OUT_OF_RANGE** = ``402`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_REQUEST_FIELD_OUT_OF_RANGE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A request field value is outside the allowed range.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_REQUEST_FIELD_EMPTY:
 
@@ -1487,11 +1439,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_REQUEST_FIELD_EMPTY** = ``403`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_REQUEST_FIELD_EMPTY>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A required request field is empty.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_TOO_MANY_REQUEST_FIELDS:
 
@@ -1499,11 +1447,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_TOO_MANY_REQUEST_FIELDS** = ``404`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_TOO_MANY_REQUEST_FIELDS>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Too many fields were provided in the request.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_RUNNING:
 
@@ -1511,11 +1455,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_OUTPUT_RUNNING** = ``500`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_RUNNING>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The requested operation cannot be performed because the output is already running.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_NOT_RUNNING:
 
@@ -1523,11 +1463,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_OUTPUT_NOT_RUNNING** = ``501`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_NOT_RUNNING>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The requested operation requires a running output, but none is active.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_PAUSED:
 
@@ -1535,11 +1471,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_OUTPUT_PAUSED** = ``502`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_PAUSED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The requested operation cannot be performed because the output is paused.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_NOT_PAUSED:
 
@@ -1547,11 +1479,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_OUTPUT_NOT_PAUSED** = ``503`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_NOT_PAUSED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The requested operation requires a paused output, but it is not paused.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_DISABLED:
 
@@ -1559,11 +1487,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_OUTPUT_DISABLED** = ``504`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_OUTPUT_DISABLED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The output is disabled and cannot perform the requested action.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_STUDIO_MODE_ACTIVE:
 
@@ -1571,11 +1495,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_STUDIO_MODE_ACTIVE** = ``505`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_STUDIO_MODE_ACTIVE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The requested operation cannot be performed while Studio Mode is active.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_STUDIO_MODE_NOT_ACTIVE:
 
@@ -1583,11 +1503,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_STUDIO_MODE_NOT_ACTIVE** = ``506`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_STUDIO_MODE_NOT_ACTIVE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The requested operation requires Studio Mode to be active.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_NOT_FOUND:
 
@@ -1595,11 +1511,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_RESOURCE_NOT_FOUND** = ``600`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_NOT_FOUND>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The specified resource could not be found.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_ALREADY_EXISTS:
 
@@ -1607,11 +1519,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_RESOURCE_ALREADY_EXISTS** = ``601`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_ALREADY_EXISTS>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The resource already exists.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_RESOURCE_TYPE:
 
@@ -1619,11 +1527,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_INVALID_RESOURCE_TYPE** = ``602`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_RESOURCE_TYPE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The resource type is invalid or unsupported.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_NOT_ENOUGH_RESOURCES:
 
@@ -1631,11 +1535,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_NOT_ENOUGH_RESOURCES** = ``603`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_NOT_ENOUGH_RESOURCES>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Insufficient resources to complete the request.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_RESOURCE_STATE:
 
@@ -1643,11 +1543,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_INVALID_RESOURCE_STATE** = ``604`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_RESOURCE_STATE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The resource is in an invalid state for this operation.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_INPUT_KIND:
 
@@ -1655,11 +1551,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_INVALID_INPUT_KIND** = ``605`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_INPUT_KIND>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The input kind specified is invalid.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_NOT_CONFIGURABLE:
 
@@ -1667,11 +1559,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_RESOURCE_NOT_CONFIGURABLE** = ``606`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_NOT_CONFIGURABLE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The resource cannot be configured.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_FILTER_KIND:
 
@@ -1679,11 +1567,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_INVALID_FILTER_KIND** = ``607`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_INVALID_FILTER_KIND>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The filter kind specified is invalid.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_CREATION_FAILED:
 
@@ -1691,11 +1575,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_RESOURCE_CREATION_FAILED** = ``700`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_CREATION_FAILED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Failed to create the requested resource.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_ACTION_FAILED:
 
@@ -1703,11 +1583,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_RESOURCE_ACTION_FAILED** = ``701`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_RESOURCE_ACTION_FAILED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The action on the resource failed.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_REQUEST_PROCESSING_FAILED:
 
@@ -1715,11 +1591,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_REQUEST_PROCESSING_FAILED** = ``702`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_REQUEST_PROCESSING_FAILED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The request could not be processed.
 
 .. _class_OBSClient_constant_OBS_REQUEST_STATUS_CANNOT_ACT:
 
@@ -1727,11 +1599,7 @@ Request completed successfully.
 
 **OBS_REQUEST_STATUS_CANNOT_ACT** = ``703`` :ref:`🔗<class_OBSClient_constant_OBS_REQUEST_STATUS_CANNOT_ACT>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The system cannot perform the requested action in the current state.
 
 .. _class_OBSClient_constant_OBS_REQUEST_BATCH_EXECUTION_TYPE_NONE:
 
@@ -1771,11 +1639,7 @@ Process requests in parallel using thread pool.
 
 **OBS_WEBSOCKET_CLOSE_DONT_CLOSE** = ``0`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_DONT_CLOSE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Do not close the WebSocket connection.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_UNKNOWN_REASON:
 
@@ -1783,11 +1647,7 @@ Process requests in parallel using thread pool.
 
 **OBS_WEBSOCKET_CLOSE_UNKNOWN_REASON** = ``4000`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_UNKNOWN_REASON>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Connection closed for an unknown reason.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_MESSAGE_DECODE_ERROR:
 
@@ -1795,11 +1655,7 @@ Process requests in parallel using thread pool.
 
 **OBS_WEBSOCKET_CLOSE_MESSAGE_DECODE_ERROR** = ``4002`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_MESSAGE_DECODE_ERROR>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Failed to decode the incoming message.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_MISSING_DATA_FIELD:
 
@@ -1807,11 +1663,7 @@ Process requests in parallel using thread pool.
 
 **OBS_WEBSOCKET_CLOSE_MISSING_DATA_FIELD** = ``4003`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_MISSING_DATA_FIELD>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A required data field is missing in the message.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_INVALID_DATA_FIELD_TYPE:
 
@@ -1819,11 +1671,7 @@ Process requests in parallel using thread pool.
 
 **OBS_WEBSOCKET_CLOSE_INVALID_DATA_FIELD_TYPE** = ``4004`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_INVALID_DATA_FIELD_TYPE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A data field has an invalid type.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_INVALID_DATA_FIELD_VALUE:
 
@@ -1831,11 +1679,7 @@ Process requests in parallel using thread pool.
 
 **OBS_WEBSOCKET_CLOSE_INVALID_DATA_FIELD_VALUE** = ``4005`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_INVALID_DATA_FIELD_VALUE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A data field contains an invalid value.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_UNKNOWN_OPCODE:
 
@@ -1843,11 +1687,7 @@ Process requests in parallel using thread pool.
 
 **OBS_WEBSOCKET_CLOSE_UNKNOWN_OPCODE** = ``4006`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_UNKNOWN_OPCODE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The opcode provided is unknown.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_NOT_IDENTIFIED:
 
@@ -1855,11 +1695,7 @@ Process requests in parallel using thread pool.
 
 **OBS_WEBSOCKET_CLOSE_NOT_IDENTIFIED** = ``4007`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_NOT_IDENTIFIED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Client attempted an operation before identifying.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_ALREADY_IDENTIFIED:
 
@@ -1867,11 +1703,7 @@ Process requests in parallel using thread pool.
 
 **OBS_WEBSOCKET_CLOSE_ALREADY_IDENTIFIED** = ``4008`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_ALREADY_IDENTIFIED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Client attempted to identify more than once.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_AUTHENTICATION_FAILED:
 
@@ -1887,11 +1719,7 @@ WebSocket closed due to authentication failure.
 
 **OBS_WEBSOCKET_CLOSE_UNSUPPORTED_RPC_VERSION** = ``4010`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_UNSUPPORTED_RPC_VERSION>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The requested RPC version is not supported.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_SESSION_INVALIDATED:
 
@@ -1899,11 +1727,7 @@ WebSocket closed due to authentication failure.
 
 **OBS_WEBSOCKET_CLOSE_SESSION_INVALIDATED** = ``4011`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_SESSION_INVALIDATED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The session was invalidated.
 
 .. _class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_UNSUPPORTED_FEATURE:
 
@@ -1911,11 +1735,7 @@ WebSocket closed due to authentication failure.
 
 **OBS_WEBSOCKET_CLOSE_UNSUPPORTED_FEATURE** = ``4012`` :ref:`🔗<class_OBSClient_constant_OBS_WEBSOCKET_CLOSE_UNSUPPORTED_FEATURE>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A requested feature is not supported.
 
 .. _class_OBSClient_constant_OBS_MEDIA_INPUT_ACTION_NONE:
 
@@ -1979,11 +1799,7 @@ Go to previous playlist item.
 
 **OBS_OUTPUT_STATE_UNKNOWN** = ``0`` :ref:`🔗<class_OBSClient_constant_OBS_OUTPUT_STATE_UNKNOWN>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Output state is unknown.
 
 .. _class_OBSClient_constant_OBS_OUTPUT_STATE_STARTING:
 
@@ -1991,11 +1807,7 @@ Go to previous playlist item.
 
 **OBS_OUTPUT_STATE_STARTING** = ``1`` :ref:`🔗<class_OBSClient_constant_OBS_OUTPUT_STATE_STARTING>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Output is starting.
 
 .. _class_OBSClient_constant_OBS_OUTPUT_STATE_STARTED:
 
@@ -2003,11 +1815,7 @@ Go to previous playlist item.
 
 **OBS_OUTPUT_STATE_STARTED** = ``2`` :ref:`🔗<class_OBSClient_constant_OBS_OUTPUT_STATE_STARTED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Output has started.
 
 .. _class_OBSClient_constant_OBS_OUTPUT_STATE_STOPPING:
 
@@ -2015,11 +1823,7 @@ Go to previous playlist item.
 
 **OBS_OUTPUT_STATE_STOPPING** = ``3`` :ref:`🔗<class_OBSClient_constant_OBS_OUTPUT_STATE_STOPPING>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Output is stopping.
 
 .. _class_OBSClient_constant_OBS_OUTPUT_STATE_STOPPED:
 
@@ -2027,11 +1831,7 @@ Go to previous playlist item.
 
 **OBS_OUTPUT_STATE_STOPPED** = ``4`` :ref:`🔗<class_OBSClient_constant_OBS_OUTPUT_STATE_STOPPED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Output has stopped.
 
 .. _class_OBSClient_constant_OBS_OUTPUT_STATE_RECONNECTING:
 
@@ -2039,11 +1839,7 @@ Go to previous playlist item.
 
 **OBS_OUTPUT_STATE_RECONNECTING** = ``5`` :ref:`🔗<class_OBSClient_constant_OBS_OUTPUT_STATE_RECONNECTING>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Output is reconnecting.
 
 .. _class_OBSClient_constant_OBS_OUTPUT_STATE_RECONNECTED:
 
@@ -2051,11 +1847,7 @@ Go to previous playlist item.
 
 **OBS_OUTPUT_STATE_RECONNECTED** = ``6`` :ref:`🔗<class_OBSClient_constant_OBS_OUTPUT_STATE_RECONNECTED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Output has reconnected.
 
 .. _class_OBSClient_constant_OBS_OUTPUT_STATE_PAUSED:
 
@@ -2063,11 +1855,7 @@ Go to previous playlist item.
 
 **OBS_OUTPUT_STATE_PAUSED** = ``7`` :ref:`🔗<class_OBSClient_constant_OBS_OUTPUT_STATE_PAUSED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Output is paused.
 
 .. _class_OBSClient_constant_OBS_OUTPUT_STATE_RESUMED:
 
@@ -2075,11 +1863,7 @@ Go to previous playlist item.
 
 **OBS_OUTPUT_STATE_RESUMED** = ``8`` :ref:`🔗<class_OBSClient_constant_OBS_OUTPUT_STATE_RESUMED>`
 
-.. container:: contribute
-
-	There is currently no description for this constant. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Output has resumed from a paused state.
 
 .. rst-class:: classref-section-separator
 

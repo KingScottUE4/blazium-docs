@@ -108,9 +108,7 @@ Property Descriptions
 - |void| **set_command**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_command**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+IRC command associated with this message.
 
 .. rst-class:: classref-item-separator
 
@@ -127,9 +125,7 @@ Property Descriptions
 - |void| **set_params**\ (\ value\: :ref:`PackedStringArray<class_PackedStringArray>`\ )
 - :ref:`PackedStringArray<class_PackedStringArray>` **get_params**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Array of parameters supplied with the IRC message.
 
 **Note:** The returned array is *copied* and any changes to it will not update the original property value. See :ref:`PackedStringArray<class_PackedStringArray>` for more details.
 
@@ -148,9 +144,7 @@ Property Descriptions
 - |void| **set_prefix**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_prefix**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Prefix identifying the source of the message.
 
 .. rst-class:: classref-item-separator
 
@@ -167,9 +161,7 @@ Property Descriptions
 - |void| **set_tags**\ (\ value\: :ref:`Dictionary<class_Dictionary>`\ )
 - :ref:`Dictionary<class_Dictionary>` **get_tags**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Raw IRCv3 message tags.
 
 .. rst-class:: classref-section-separator
 

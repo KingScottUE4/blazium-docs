@@ -75,9 +75,7 @@ Property Descriptions
 - |void| **set_effects**\ (\ value\: :ref:`Array<class_Array>`\[:ref:`CrowdControlEffect<class_CrowdControlEffect>`\]\ )
 - :ref:`Array<class_Array>`\[:ref:`CrowdControlEffect<class_CrowdControlEffect>`\] **get_effects**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Array of individual interactivity effects in the pack.
 
 .. rst-class:: classref-item-separator
 
@@ -94,9 +92,7 @@ Property Descriptions
 - |void| **set_pack_meta**\ (\ value\: :ref:`CrowdControlGamePackMeta<class_CrowdControlGamePackMeta>`\ )
 - :ref:`CrowdControlGamePackMeta<class_CrowdControlGamePackMeta>` **get_pack_meta**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Stores the metadata for the pack.
 
 .. rst-class:: classref-section-separator
 
