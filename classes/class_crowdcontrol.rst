@@ -242,11 +242,7 @@ enum **EffectStatus**: :ref:`🔗<enum_CrowdControl_EffectStatus>`
 
 :ref:`EffectStatus<enum_CrowdControl_EffectStatus>` **STATUS_SUCCESS** = ``0``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The effect executed successfully.
 
 .. _class_CrowdControl_constant_STATUS_FAILURE:
 
@@ -254,11 +250,7 @@ enum **EffectStatus**: :ref:`🔗<enum_CrowdControl_EffectStatus>`
 
 :ref:`EffectStatus<enum_CrowdControl_EffectStatus>` **STATUS_FAILURE** = ``1``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The effect failed to execute.
 
 .. _class_CrowdControl_constant_STATUS_UNAVAILABLE:
 
@@ -266,11 +258,7 @@ enum **EffectStatus**: :ref:`🔗<enum_CrowdControl_EffectStatus>`
 
 :ref:`EffectStatus<enum_CrowdControl_EffectStatus>` **STATUS_UNAVAILABLE** = ``2``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The effect is currently unavailable and cannot be triggered.
 
 .. _class_CrowdControl_constant_STATUS_RETRY:
 
@@ -278,11 +266,7 @@ enum **EffectStatus**: :ref:`🔗<enum_CrowdControl_EffectStatus>`
 
 :ref:`EffectStatus<enum_CrowdControl_EffectStatus>` **STATUS_RETRY** = ``3``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The effect execution failed but may succeed if retried.
 
 .. _class_CrowdControl_constant_STATUS_QUEUE:
 
@@ -290,11 +274,7 @@ enum **EffectStatus**: :ref:`🔗<enum_CrowdControl_EffectStatus>`
 
 :ref:`EffectStatus<enum_CrowdControl_EffectStatus>` **STATUS_QUEUE** = ``4``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The effect has been queued and will execute later.
 
 .. _class_CrowdControl_constant_STATUS_TIMED_BEGIN:
 
@@ -302,11 +282,7 @@ enum **EffectStatus**: :ref:`🔗<enum_CrowdControl_EffectStatus>`
 
 :ref:`EffectStatus<enum_CrowdControl_EffectStatus>` **STATUS_TIMED_BEGIN** = ``5``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A timed effect has started.
 
 .. _class_CrowdControl_constant_STATUS_TIMED_PAUSE:
 
@@ -314,11 +290,7 @@ enum **EffectStatus**: :ref:`🔗<enum_CrowdControl_EffectStatus>`
 
 :ref:`EffectStatus<enum_CrowdControl_EffectStatus>` **STATUS_TIMED_PAUSE** = ``6``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A timed effect has been paused.
 
 .. _class_CrowdControl_constant_STATUS_TIMED_RESUME:
 
@@ -326,11 +298,7 @@ enum **EffectStatus**: :ref:`🔗<enum_CrowdControl_EffectStatus>`
 
 :ref:`EffectStatus<enum_CrowdControl_EffectStatus>` **STATUS_TIMED_RESUME** = ``7``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A timed effect has resumed after being paused.
 
 .. _class_CrowdControl_constant_STATUS_TIMED_END:
 
@@ -338,11 +306,7 @@ enum **EffectStatus**: :ref:`🔗<enum_CrowdControl_EffectStatus>`
 
 :ref:`EffectStatus<enum_CrowdControl_EffectStatus>` **STATUS_TIMED_END** = ``8``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+A timed effect has completed or ended.
 
 .. rst-class:: classref-item-separator
 
@@ -360,11 +324,7 @@ enum **EffectReportStatus**: :ref:`🔗<enum_CrowdControl_EffectReportStatus>`
 
 :ref:`EffectReportStatus<enum_CrowdControl_EffectReportStatus>` **MENU_VISIBLE** = ``0``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The effect is visible in the menu.
 
 .. _class_CrowdControl_constant_MENU_HIDDEN:
 
@@ -372,11 +332,7 @@ enum **EffectReportStatus**: :ref:`🔗<enum_CrowdControl_EffectReportStatus>`
 
 :ref:`EffectReportStatus<enum_CrowdControl_EffectReportStatus>` **MENU_HIDDEN** = ``1``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The effect is hidden from the menu.
 
 .. _class_CrowdControl_constant_MENU_AVAILABLE:
 
@@ -384,11 +340,7 @@ enum **EffectReportStatus**: :ref:`🔗<enum_CrowdControl_EffectReportStatus>`
 
 :ref:`EffectReportStatus<enum_CrowdControl_EffectReportStatus>` **MENU_AVAILABLE** = ``2``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The effect is available for selection or triggering.
 
 .. _class_CrowdControl_constant_MENU_UNAVAILABLE:
 
@@ -396,11 +348,7 @@ enum **EffectReportStatus**: :ref:`🔗<enum_CrowdControl_EffectReportStatus>`
 
 :ref:`EffectReportStatus<enum_CrowdControl_EffectReportStatus>` **MENU_UNAVAILABLE** = ``3``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The effect is visible but currently unavailable for triggering.
 
 .. rst-class:: classref-section-separator
 

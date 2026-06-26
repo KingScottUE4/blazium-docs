@@ -87,9 +87,7 @@ Property Descriptions
 - |void| **set_category**\ (\ value\: :ref:`PackedStringArray<class_PackedStringArray>`\ )
 - :ref:`PackedStringArray<class_PackedStringArray>` **get_category**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+List of categories this effect belongs to.
 
 **Note:** The returned array is *copied* and any changes to it will not update the original property value. See :ref:`PackedStringArray<class_PackedStringArray>` for more details.
 
@@ -108,9 +106,7 @@ Property Descriptions
 - |void| **set_description**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_description**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Human-readable description of the effect.
 
 .. rst-class:: classref-item-separator
 
@@ -127,9 +123,9 @@ Property Descriptions
 - |void| **set_duration**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_duration**\ (\ )
 
-.. container:: contribute
+Duration of the effect in milliseconds.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+A value of 0 usually indicates an instant effect with no lasting duration.
 
 .. rst-class:: classref-item-separator
 
@@ -146,9 +142,7 @@ Property Descriptions
 - |void| **set_effect_id**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_effect_id**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Unique identifier for this effect.
 
 .. rst-class:: classref-item-separator
 
@@ -165,9 +159,7 @@ Property Descriptions
 - |void| **set_effect_name**\ (\ value\: :ref:`Variant<class_Variant>`\ )
 - :ref:`Variant<class_Variant>` **get_effect_name**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Display name of the effect.
 
 .. rst-class:: classref-item-separator
 
@@ -184,9 +176,7 @@ Property Descriptions
 - |void| **set_group**\ (\ value\: :ref:`PackedStringArray<class_PackedStringArray>`\ )
 - :ref:`PackedStringArray<class_PackedStringArray>` **get_group**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+List of groups this effect belongs to.
 
 **Note:** The returned array is *copied* and any changes to it will not update the original property value. See :ref:`PackedStringArray<class_PackedStringArray>` for more details.
 
@@ -205,9 +195,7 @@ Property Descriptions
 - |void| **set_inactive**\ (\ value\: :ref:`bool<class_bool>`\ )
 - :ref:`bool<class_bool>` **is_inactive**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Whether the effect is currently inactive.
 
 .. rst-class:: classref-item-separator
 
@@ -224,9 +212,7 @@ Property Descriptions
 - |void| **set_note**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_note**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Additional notes or internal comments about the effect.
 
 .. rst-class:: classref-item-separator
 
@@ -243,9 +229,7 @@ Property Descriptions
 - |void| **set_parameters**\ (\ value\: :ref:`Dictionary<class_Dictionary>`\ )
 - :ref:`Dictionary<class_Dictionary>` **get_parameters**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Dictionary of configurable parameters for the effect.
 
 .. rst-class:: classref-item-separator
 
@@ -262,9 +246,9 @@ Property Descriptions
 - |void| **set_price**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_price**\ (\ )
 
-.. container:: contribute
+Cost required to trigger the effect.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Typically expressed in platform-specific currency (e.g., points, coins).
 
 .. rst-class:: classref-item-separator
 
@@ -281,9 +265,7 @@ Property Descriptions
 - |void| **set_quantity_max**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_quantity_max**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Maximum quantity that can be applied in a single trigger.
 
 .. rst-class:: classref-item-separator
 
@@ -300,9 +282,7 @@ Property Descriptions
 - |void| **set_quantity_min**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_quantity_min**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Minimum quantity required to trigger the effect.
 
 .. rst-class:: classref-section-separator
 

@@ -298,7 +298,7 @@ To detect whether the current build is 64-bit, or the type of architecture, don'
 
 :ref:`Dictionary<class_Dictionary>` **get_author_info**\ (\ ) |const| :ref:`🔗<class_Engine_method_get_author_info>`
 
-Returns the engine author information as a :ref:`Dictionary<class_Dictionary>`, where each entry is an :ref:`Array<class_Array>` of strings with the names of notable contributors to the Godot Engine: ``lead_developers``, ``founders``, ``project_managers``, and ``developers``.
+Returns the engine author information as a :ref:`Dictionary<class_Dictionary>`, where each entry is an :ref:`Array<class_Array>` of strings with the names of Blazium developers ``blazium_developers`` and notable contributors to the Godot Engine: ``lead_developers``, ``founders``, ``project_managers``, and ``developers``.
 
 .. rst-class:: classref-item-separator
 
@@ -330,9 +330,9 @@ Every :ref:`Dictionary<class_Dictionary>` contains a ``name`` identifier, and a 
 
 :ref:`Dictionary<class_Dictionary>` **get_donor_info**\ (\ ) |const| :ref:`🔗<class_Engine_method_get_donor_info>`
 
-Returns a :ref:`Dictionary<class_Dictionary>` of categorized donor names. Each entry is an :ref:`Array<class_Array>` of strings:
+Returns a :ref:`Dictionary<class_Dictionary>` of categorized Blazium sponsors and Godot donor names. Each entry is an :ref:`Array<class_Array>` of strings:
 
-{``platinum_sponsors``, ``gold_sponsors``, ``silver_sponsors``, ``bronze_sponsors``, ``mini_sponsors``, ``gold_donors``, ``silver_donors``, ``bronze_donors``}
+{``platinum_sponsors``, ``gold_sponsors``, ``silver_sponsors``, ``bronze_sponsors``, ``mini_sponsors``, ``gold_donors``, ``silver_donors``, ``bronze_donors``, ``blazium_sponsors``}
 
 .. rst-class:: classref-item-separator
 
@@ -558,15 +558,31 @@ Returns a list of names of all available global singletons. See also :ref:`get_s
 
 Returns the current engine version information as a :ref:`Dictionary<class_Dictionary>` containing the following entries:
 
-- ``major`` - Major version number as an int;
 
-- ``minor`` - Minor version number as an int;
 
-- ``patch`` - Patch version number as an int;
+- ``external_major`` - Blazium Engine's major version number as an int;
 
-- ``hex`` - Full version encoded as a hexadecimal int with one byte (2 hex digits) per number (see example below);
+- ``external_minor`` - Blazium Engine's minor version number as an int;
 
-- ``status`` - Status (such as "beta", "rc1", "rc2", "stable", etc.) as a String;
+- ``external_patch`` - Blazium Engine's patch version number as an int;
+
+- ``external_hex`` - Blazium Engine's full version encoded as a hexadecimal int with one byte (2 hex digits) for the major number and one for the minor number, and 12 bits (3 hex digits) for the patch number (see example below);
+
+- ``external_status`` - Blazium Engine's status ("nightly", "release") as a String;
+
+- ``external_string`` - ``external_major``, ``external_minor``, ``external_patch``, ``external_status``, and ``build`` in a single String.
+
+- ``major`` - Godot Engine's major version number as an int;
+
+- ``minor`` - Godot Engine's minor version number as an int;
+
+- ``patch`` - Godot Engine's patch version number as an int;
+
+- ``hex`` - Godot Engine's full version encoded as a hexadecimal int with one byte (2 hex digits) per number (see example below);
+
+- ``status`` - Godot Engine's status (such as "beta", "rc1", "rc2", "stable", etc.) as a String;
+
+- ``string`` - ``major``, ``minor``, ``patch``, ``status``, and ``build`` in a single String.
 
 - ``build`` - Build name (e.g. "custom_build") as a String;
 
@@ -574,11 +590,15 @@ Returns the current engine version information as a :ref:`Dictionary<class_Dicti
 
 - ``timestamp`` - Holds the Git commit date UNIX timestamp in seconds as an int, or ``0`` if unavailable;
 
-- ``string`` - ``major``, ``minor``, ``patch``, ``status``, and ``build`` in a single String.
+
+
+The ``external_hex`` value is encoded as follows, from left to right: one byte for the major, one byte for the minor, one byte and four bits for the patch version. For example, "0.5.291" would be ``0x0005123``.
 
 The ``hex`` value is encoded as follows, from left to right: one byte for the major, one byte for the minor, one byte for the patch version. For example, "3.1.12" would be ``0x03010C``.
 
-\ **Note:** The ``hex`` value is still an :ref:`int<class_int>` internally, and printing it will give you its decimal representation, which is not particularly meaningful. Use hexadecimal literals for quick version comparisons from code:
+
+
+\ **Note:** Both the ``external_hex`` and ``hex`` values is still an :ref:`int<class_int>` internally, and printing one of them will give you its decimal representation, which is not particularly meaningful. Use hexadecimal literals for quick version comparisons from code:
 
 
 .. tabs::

@@ -269,6 +269,8 @@ Properties
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`editors/animation/confirm_insert_track<class_EditorSettings_property_editors/animation/confirm_insert_track>`                                                                                               |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`float<class_float>`                         | :ref:`editors/animation/default_animation_step<class_EditorSettings_property_editors/animation/default_animation_step>`                                                                                           |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`editors/animation/default_create_bezier_tracks<class_EditorSettings_property_editors/animation/default_create_bezier_tracks>`                                                                               |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`editors/animation/default_create_reset_tracks<class_EditorSettings_property_editors/animation/default_create_reset_tracks>`                                                                                 |
@@ -445,6 +447,8 @@ Properties
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`interface/editor/dock_tab_style<class_EditorSettings_property_interface/editor/dock_tab_style>`                                                                                                             |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`float<class_float>`                         | :ref:`interface/editor/dragging_hover_wait_seconds<class_EditorSettings_property_interface/editor/dragging_hover_wait_seconds>`                                                                                   |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`interface/editor/editor_language<class_EditorSettings_property_interface/editor/editor_language>`                                                                                                           |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`interface/editor/editor_screen<class_EditorSettings_property_interface/editor/editor_screen>`                                                                                                               |
@@ -508,6 +512,8 @@ Properties
    | :ref:`bool<class_bool>`                           | :ref:`interface/editors/show_scene_tree_root_selection<class_EditorSettings_property_interface/editors/show_scene_tree_root_selection>`                                                                           |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`interface/inspector/auto_unfold_foreign_scenes<class_EditorSettings_property_interface/inspector/auto_unfold_foreign_scenes>`                                                                               |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`interface/inspector/color_picker_show_intensity<class_EditorSettings_property_interface/inspector/color_picker_show_intensity>`                                                                             |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`interface/inspector/default_color_picker_mode<class_EditorSettings_property_interface/inspector/default_color_picker_mode>`                                                                                 |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -648,6 +654,8 @@ Properties
    | :ref:`bool<class_bool>`                           | :ref:`text_editor/appearance/caret/highlight_current_line<class_EditorSettings_property_text_editor/appearance/caret/highlight_current_line>`                                                                     |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`text_editor/appearance/caret/type<class_EditorSettings_property_text_editor/appearance/caret/type>`                                                                                                         |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`text_editor/appearance/enable_inline_color_picker<class_EditorSettings_property_text_editor/appearance/enable_inline_color_picker>`                                                                         |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`text_editor/appearance/guidelines/line_length_guideline_hard_column<class_EditorSettings_property_text_editor/appearance/guidelines/line_length_guideline_hard_column>`                                     |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -864,6 +872,8 @@ Properties
    | :ref:`Color<class_Color>`                         | :ref:`text_editor/theme/highlighting/text_selected_color<class_EditorSettings_property_text_editor/theme/highlighting/text_selected_color>`                                                                       |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Color<class_Color>`                         | :ref:`text_editor/theme/highlighting/user_type_color<class_EditorSettings_property_text_editor/theme/highlighting/user_type_color>`                                                                               |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Color<class_Color>`                         | :ref:`text_editor/theme/highlighting/warning_color<class_EditorSettings_property_text_editor/theme/highlighting/warning_color>`                                                                                   |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Color<class_Color>`                         | :ref:`text_editor/theme/highlighting/word_highlighted_color<class_EditorSettings_property_text_editor/theme/highlighting/word_highlighted_color>`                                                                 |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2265,6 +2275,20 @@ If ``false``, the behavior is reversed, i.e. the dialog only appears when Shift 
 
 ----
 
+.. _class_EditorSettings_property_editors/animation/default_animation_step:
+
+.. rst-class:: classref-property
+
+:ref:`float<class_float>` **editors/animation/default_animation_step** :ref:`🔗<class_EditorSettings_property_editors/animation/default_animation_step>`
+
+Default step used when creating a new :ref:`Animation<class_Animation>` in the Animation bottom panel. Only affects the first animation created in the :ref:`AnimationPlayer<class_AnimationPlayer>`. By default, other newly created animations will use the step from the previous ones.
+
+This value is always expressed in seconds. If you want e.g. ``10`` FPS to be the default, you need to set the default step to ``0.1``.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorSettings_property_editors/animation/default_create_bezier_tracks:
 
 .. rst-class:: classref-property
@@ -3292,7 +3316,7 @@ Input accumulation can be disabled to get slightly more precise/reactive input a
 
 How to position the Cancel and OK buttons in the editor's :ref:`AcceptDialog<class_AcceptDialog>`\ s. Different platforms have different standard behaviors for this, which can be overridden using this setting. This is useful if you use Godot both on Windows and macOS/Linux and your Godot muscle memory is stronger than your OS specific one.
 
-- **Auto** follows the platform convention: Cancel first on macOS and Linux, OK first on Windows.
+- **Auto** follows the platform convention: OK first on Windows, KDE, and LXQt, Cancel first on macOS and other Linux desktop environments.
 
 - **Cancel First** forces the ordering Cancel/OK.
 
@@ -3417,6 +3441,18 @@ If set to **Custom**, the scaling value in :ref:`interface/editor/custom_display
 :ref:`int<class_int>` **interface/editor/dock_tab_style** :ref:`🔗<class_EditorSettings_property_interface/editor/dock_tab_style>`
 
 Tab style of editor docks.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorSettings_property_interface/editor/dragging_hover_wait_seconds:
+
+.. rst-class:: classref-property
+
+:ref:`float<class_float>` **interface/editor/dragging_hover_wait_seconds** :ref:`🔗<class_EditorSettings_property_interface/editor/dragging_hover_wait_seconds>`
+
+During a drag-and-drop, this is how long to wait over a UI element before it triggers a reaction (e.g. a section unfolds to show nested items).
 
 .. rst-class:: classref-item-separator
 
@@ -3845,6 +3881,18 @@ If ``true``, the Scene dock will display buttons to quickly add a root node to a
 :ref:`bool<class_bool>` **interface/inspector/auto_unfold_foreign_scenes** :ref:`🔗<class_EditorSettings_property_interface/inspector/auto_unfold_foreign_scenes>`
 
 If ``true``, automatically expands property groups in the Inspector dock when opening a scene that hasn't been opened previously. If ``false``, all groups remain collapsed by default.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorSettings_property_interface/inspector/color_picker_show_intensity:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **interface/inspector/color_picker_show_intensity** :ref:`🔗<class_EditorSettings_property_interface/inspector/color_picker_show_intensity>`
+
+If ``true``, show the intensity slider in the :ref:`ColorPicker<class_ColorPicker>`\ s opened in the editor.
 
 .. rst-class:: classref-item-separator
 
@@ -4492,7 +4540,7 @@ The port number to use to contact the HTTP and HTTPS proxy in the editor (for th
 
 :ref:`String<class_String>` **network/tls/editor_tls_certificates** :ref:`🔗<class_EditorSettings_property_network/tls/editor_tls_certificates>`
 
-The TLS certificate bundle to use for HTTP requests made within the editor (e.g. from the AssetLib tab). If left empty, the `included Mozilla certificate bundle <https://github.com/godotengine/godot/blob/master/thirdparty/certs/ca-certificates.crt>`__ will be used.
+The TLS certificate bundle to use for HTTP requests made within the editor (e.g. from the AssetLib tab). If left empty, the `included Mozilla certificate bundle <https://github.com/godotengine/godot/blob/master/thirdparty/certs/ca-bundle.crt>`__ will be used.
 
 .. rst-class:: classref-item-separator
 
@@ -4761,6 +4809,18 @@ If ``true``, colors the background of the line the caret is currently on with :r
 :ref:`int<class_int>` **text_editor/appearance/caret/type** :ref:`🔗<class_EditorSettings_property_text_editor/appearance/caret/type>`
 
 The shape of the caret to use in the script editor. **Line** displays a vertical line to the left of the current character, whereas **Block** displays an outline over the current character.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorSettings_property_text_editor/appearance/enable_inline_color_picker:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **text_editor/appearance/enable_inline_color_picker** :ref:`🔗<class_EditorSettings_property_text_editor/appearance/enable_inline_color_picker>`
+
+If ``true``, displays a colored button before any :ref:`Color<class_Color>` constructor in the script editor. Clicking on them allows the color to be modified through a color picker.
 
 .. rst-class:: classref-item-separator
 
@@ -6083,6 +6143,18 @@ The script editor's background color for text. This should be set to a transluce
 :ref:`Color<class_Color>` **text_editor/theme/highlighting/user_type_color** :ref:`🔗<class_EditorSettings_property_text_editor/theme/highlighting/user_type_color>`
 
 The script editor's color for user-defined types (using ``class_name``).
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorSettings_property_text_editor/theme/highlighting/warning_color:
+
+.. rst-class:: classref-property
+
+:ref:`Color<class_Color>` **text_editor/theme/highlighting/warning_color** :ref:`🔗<class_EditorSettings_property_text_editor/theme/highlighting/warning_color>`
+
+The script editor's background color for lines with warnings. This should be set to a translucent color so that it can display on top of other line color modifiers such as :ref:`text_editor/theme/highlighting/current_line_color<class_EditorSettings_property_text_editor/theme/highlighting/current_line_color>`.
 
 .. rst-class:: classref-item-separator
 

@@ -51,6 +51,8 @@ Properties
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`CrowdControl<class_CrowdControl>`                       | :ref:`CrowdControl<class_@GlobalScope_property_CrowdControl>`                       |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | :ref:`Discord<class_Discord>`                                 | :ref:`Discord<class_@GlobalScope_property_Discord>`                                 |
+   +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`DisplayServer<class_DisplayServer>`                     | :ref:`DisplayServer<class_@GlobalScope_property_DisplayServer>`                     |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`ENV<class_ENV>`                                         | :ref:`ENV<class_@GlobalScope_property_ENV>`                                         |
@@ -125,11 +127,15 @@ Properties
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`SocketIOClient<class_SocketIOClient>`                   | :ref:`SocketIOClient<class_@GlobalScope_property_SocketIOClient>`                   |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | :ref:`Steam<class_Steam>`                                     | :ref:`Steam<class_@GlobalScope_property_Steam>`                                     |
+   +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`TextServerManager<class_TextServerManager>`             | :ref:`TextServerManager<class_@GlobalScope_property_TextServerManager>`             |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`ThemeDB<class_ThemeDB>`                                 | :ref:`ThemeDB<class_@GlobalScope_property_ThemeDB>`                                 |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`Time<class_Time>`                                       | :ref:`Time<class_@GlobalScope_property_Time>`                                       |
+   +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | :ref:`TownSdkClient<class_TownSdkClient>`                     | :ref:`TownSDK<class_@GlobalScope_property_TownSDK>`                                 |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`TranslationServer<class_TranslationServer>`             | :ref:`TranslationServer<class_@GlobalScope_property_TranslationServer>`             |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
@@ -4854,6 +4860,20 @@ The :ref:`CrowdControl<class_CrowdControl>` singleton.
 
 ----
 
+.. _class_@GlobalScope_property_Discord:
+
+.. rst-class:: classref-property
+
+:ref:`Discord<class_Discord>` **Discord** :ref:`🔗<class_@GlobalScope_property_Discord>`
+
+.. container:: contribute
+
+	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_@GlobalScope_property_DisplayServer:
 
 .. rst-class:: classref-property
@@ -4872,7 +4892,9 @@ The :ref:`DisplayServer<class_DisplayServer>` singleton.
 
 :ref:`ENV<class_ENV>` **ENV** :ref:`🔗<class_@GlobalScope_property_ENV>`
 
-The :ref:`ENV<class_ENV>` singleton.
+.. container:: contribute
+
+	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
 
 .. rst-class:: classref-item-separator
 
@@ -5042,7 +5064,7 @@ The :ref:`InputMap<class_InputMap>` singleton.
 
 :ref:`JWT<class_JWT>` **JWT** :ref:`🔗<class_@GlobalScope_property_JWT>`
 
-The :ref:`JWT<class_JWT>` singleton.
+The :ref:`JWT<class_JWT>` (JSON Web Token) singleton.
 
 .. rst-class:: classref-item-separator
 
@@ -5306,6 +5328,20 @@ The :ref:`SocketIOClient<class_SocketIOClient>` singleton.
 
 ----
 
+.. _class_@GlobalScope_property_Steam:
+
+.. rst-class:: classref-property
+
+:ref:`Steam<class_Steam>` **Steam** :ref:`🔗<class_@GlobalScope_property_Steam>`
+
+.. container:: contribute
+
+	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_@GlobalScope_property_TextServerManager:
 
 .. rst-class:: classref-property
@@ -5337,6 +5373,20 @@ The :ref:`ThemeDB<class_ThemeDB>` singleton.
 :ref:`Time<class_Time>` **Time** :ref:`🔗<class_@GlobalScope_property_Time>`
 
 The :ref:`Time<class_Time>` singleton.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_@GlobalScope_property_TownSDK:
+
+.. rst-class:: classref-property
+
+:ref:`TownSdkClient<class_TownSdkClient>` **TownSDK** :ref:`🔗<class_@GlobalScope_property_TownSDK>`
+
+.. container:: contribute
+
+	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
 
 .. rst-class:: classref-item-separator
 

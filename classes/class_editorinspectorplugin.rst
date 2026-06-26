@@ -12,6 +12,8 @@ EditorInspectorPlugin
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
+**Inherited By:** :ref:`MultiuserEditorSettingsInspectorPlugin<class_MultiuserEditorSettingsInspectorPlugin>`
+
 Plugin for adding custom property editors on the inspector.
 
 .. rst-class:: classref-introduction-group

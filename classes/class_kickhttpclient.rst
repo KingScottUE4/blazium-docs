@@ -225,9 +225,7 @@ Sets the callback function that will be called when a response is received.
 
 |void| **set_tls_options**\ (\ tls_options\: :ref:`TLSOptions<class_TLSOptions>`\ ) :ref:`🔗<class_KickHTTPClient_method_set_tls_options>`
 
-.. container:: contribute
-
-	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Sets the TLS configuration used for secure network communication.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

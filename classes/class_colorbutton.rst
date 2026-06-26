@@ -29,13 +29,15 @@ Properties
 .. table::
    :widths: auto
 
-   +---------------------------+----------------------------------------------------------+-----------------------+
-   | :ref:`Color<class_Color>` | :ref:`color<class_ColorButton_property_color>`           | ``Color(1, 1, 1, 1)`` |
-   +---------------------------+----------------------------------------------------------+-----------------------+
-   | :ref:`bool<class_bool>`   | :ref:`edit_alpha<class_ColorButton_property_edit_alpha>` | ``true``              |
-   +---------------------------+----------------------------------------------------------+-----------------------+
-   | :ref:`bool<class_bool>`   | :ref:`flat<class_ColorButton_property_flat>`             | ``false``             |
-   +---------------------------+----------------------------------------------------------+-----------------------+
+   +---------------------------+------------------------------------------------------------------+-----------------------+
+   | :ref:`Color<class_Color>` | :ref:`color<class_ColorButton_property_color>`                   | ``Color(1, 1, 1, 1)`` |
+   +---------------------------+------------------------------------------------------------------+-----------------------+
+   | :ref:`bool<class_bool>`   | :ref:`edit_alpha<class_ColorButton_property_edit_alpha>`         | ``true``              |
+   +---------------------------+------------------------------------------------------------------+-----------------------+
+   | :ref:`bool<class_bool>`   | :ref:`edit_intensity<class_ColorButton_property_edit_intensity>` | ``true``              |
+   +---------------------------+------------------------------------------------------------------+-----------------------+
+   | :ref:`bool<class_bool>`   | :ref:`flat<class_ColorButton_property_flat>`                     | ``false``             |
+   +---------------------------+------------------------------------------------------------------+-----------------------+
 
 .. rst-class:: classref-reftable-group
 
@@ -130,6 +132,23 @@ The button's display color.
 - :ref:`bool<class_bool>` **is_editing_alpha**\ (\ )
 
 If ``true``, shows an alpha channel slider (opacity).
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ColorButton_property_edit_intensity:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **edit_intensity** = ``true`` :ref:`🔗<class_ColorButton_property_edit_intensity>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_edit_intensity**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **is_editing_intensity**\ (\ )
+
+If ``true``, shows an intensity slider. The intensity is applied as follows: multiply the color by ``2 ** intensity`` in linear RGB space, and then convert it back to sRGB.
 
 .. rst-class:: classref-item-separator
 

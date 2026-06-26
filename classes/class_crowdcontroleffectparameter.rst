@@ -69,9 +69,9 @@ Property Descriptions
 - |void| **set_options**\ (\ value\: :ref:`Dictionary<class_Dictionary>`\ )
 - :ref:`Dictionary<class_Dictionary>` **get_options**\ (\ )
 
-.. container:: contribute
+Used when the parameter represents a predefined set of values (e.g., dropdown or choice list).
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Keys typically represent option identifiers, while values define their display names or metadata.
 
 .. rst-class:: classref-item-separator
 
@@ -88,9 +88,9 @@ Property Descriptions
 - |void| **set_parameter_name**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_parameter_name**\ (\ )
 
-.. container:: contribute
+Used to identify and reference this parameter when passing values to an effect.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Must be consistent with the expected parameter key in the effect's configuration.
 
 .. rst-class:: classref-item-separator
 
@@ -107,9 +107,11 @@ Property Descriptions
 - |void| **set_parameter_type**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_parameter_type**\ (\ )
 
-.. container:: contribute
+Defines how the parameter value should be interpreted and presented.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Common types include "options", "number", "string", or "boolean".
+
+The default "options" type indicates that selectable values are provided via the `options` dictionary.
 
 .. rst-class:: classref-section-separator
 

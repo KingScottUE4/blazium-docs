@@ -53,6 +53,8 @@ Properties
    +-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
    | :ref:`AutowrapMode<enum_TextServer_AutowrapMode>`                           | :ref:`autowrap_mode<class_RichTextLabel_property_autowrap_mode>`                                                 | ``3``                                                                     |
    +-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+   | |bitfield|\[:ref:`LineBreakFlag<enum_TextServer_LineBreakFlag>`\]           | :ref:`autowrap_trim_flags<class_RichTextLabel_property_autowrap_trim_flags>`                                     | ``192``                                                                   |
+   +-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                                     | :ref:`bbcode_enabled<class_RichTextLabel_property_bbcode_enabled>`                                               | ``false``                                                                 |
    +-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                                     | clip_contents                                                                                                    | ``true`` (overrides :ref:`Control<class_Control_property_clip_contents>`) |
@@ -242,6 +244,8 @@ Methods
    | |void|                              | :ref:`push_table<class_RichTextLabel_method_push_table>`\ (\ columns\: :ref:`int<class_int>`, inline_align\: :ref:`InlineAlignment<enum_@GlobalScope_InlineAlignment>` = 0, align_to_row\: :ref:`int<class_int>` = -1\ )                                                                                                                                                                                                                                                                                                                                                                                                                      |
    +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                              | :ref:`push_underline<class_RichTextLabel_method_push_underline>`\ (\ )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+   +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                              | :ref:`reload_effects<class_RichTextLabel_method_reload_effects>`\ (\ )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
    +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`             | :ref:`remove_paragraph<class_RichTextLabel_method_remove_paragraph>`\ (\ paragraph\: :ref:`int<class_int>`, no_invalidate\: :ref:`bool<class_bool>` = false\ )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
    +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -616,6 +620,23 @@ Property Descriptions
 - :ref:`AutowrapMode<enum_TextServer_AutowrapMode>` **get_autowrap_mode**\ (\ )
 
 If set to something other than :ref:`TextServer.AUTOWRAP_OFF<class_TextServer_constant_AUTOWRAP_OFF>`, the text gets wrapped inside the node's bounding rectangle. To see how each mode behaves, see :ref:`AutowrapMode<enum_TextServer_AutowrapMode>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_RichTextLabel_property_autowrap_trim_flags:
+
+.. rst-class:: classref-property
+
+|bitfield|\[:ref:`LineBreakFlag<enum_TextServer_LineBreakFlag>`\] **autowrap_trim_flags** = ``192`` :ref:`🔗<class_RichTextLabel_property_autowrap_trim_flags>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_autowrap_trim_flags**\ (\ value\: |bitfield|\[:ref:`LineBreakFlag<enum_TextServer_LineBreakFlag>`\]\ )
+- |bitfield|\[:ref:`LineBreakFlag<enum_TextServer_LineBreakFlag>`\] **get_autowrap_trim_flags**\ (\ )
+
+Autowrap space trimming flags. See :ref:`TextServer.BREAK_TRIM_START_EDGE_SPACES<class_TextServer_constant_BREAK_TRIM_START_EDGE_SPACES>` and :ref:`TextServer.BREAK_TRIM_END_EDGE_SPACES<class_TextServer_constant_BREAK_TRIM_END_EDGE_SPACES>` for more info.
 
 .. rst-class:: classref-item-separator
 
@@ -1962,6 +1983,18 @@ Adds a ``[table=columns,inline_align]`` tag to the tag stack. Use :ref:`set_tabl
 |void| **push_underline**\ (\ ) :ref:`🔗<class_RichTextLabel_method_push_underline>`
 
 Adds a ``[u]`` tag to the tag stack.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_RichTextLabel_method_reload_effects:
+
+.. rst-class:: classref-method
+
+|void| **reload_effects**\ (\ ) :ref:`🔗<class_RichTextLabel_method_reload_effects>`
+
+Reloads custom effects. Useful when :ref:`custom_effects<class_RichTextLabel_property_custom_effects>` is modified manually.
 
 .. rst-class:: classref-item-separator
 

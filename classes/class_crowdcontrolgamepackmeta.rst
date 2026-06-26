@@ -77,9 +77,7 @@ Property Descriptions
 - |void| **set_connector**\ (\ value\: :ref:`PackedStringArray<class_PackedStringArray>`\ )
 - :ref:`PackedStringArray<class_PackedStringArray>` **get_connector**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+List of connectors supported by this game pack.
 
 **Note:** The returned array is *copied* and any changes to it will not update the original property value. See :ref:`PackedStringArray<class_PackedStringArray>` for more details.
 
@@ -98,9 +96,7 @@ Property Descriptions
 - |void| **set_description**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_description**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Human-readable description of the game pack.
 
 .. rst-class:: classref-item-separator
 
@@ -117,9 +113,7 @@ Property Descriptions
 - |void| **set_game_name**\ (\ value\: :ref:`Variant<class_Variant>`\ )
 - :ref:`Variant<class_Variant>` **get_game_name**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Display name of the game.
 
 .. rst-class:: classref-item-separator
 
@@ -136,9 +130,7 @@ Property Descriptions
 - |void| **set_guide_url**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_guide_url**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+URL to an external guide or documentation.
 
 .. rst-class:: classref-item-separator
 
@@ -155,9 +147,7 @@ Property Descriptions
 - |void| **set_platform**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_platform**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Target platform for the game.
 
 .. rst-class:: classref-item-separator
 
@@ -174,9 +164,7 @@ Property Descriptions
 - |void| **set_release_date**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_release_date**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Release date of the game.
 
 .. rst-class:: classref-item-separator
 
@@ -193,9 +181,7 @@ Property Descriptions
 - |void| **set_steam_id**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_steam_id**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Steam application ID for the game.
 
 .. rst-class:: classref-section-separator
 

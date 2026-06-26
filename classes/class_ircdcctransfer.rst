@@ -103,11 +103,7 @@ enum **Type**: :ref:`🔗<enum_IRCDCCTransfer_Type>`
 
 :ref:`Type<enum_IRCDCCTransfer_Type>` **TYPE_FILE_SEND** = ``0``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Represents an outgoing file transfer (sending a file to a remote user).
 
 .. _class_IRCDCCTransfer_constant_TYPE_FILE_RECEIVE:
 
@@ -115,11 +111,7 @@ enum **Type**: :ref:`🔗<enum_IRCDCCTransfer_Type>`
 
 :ref:`Type<enum_IRCDCCTransfer_Type>` **TYPE_FILE_RECEIVE** = ``1``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Represents an incoming file transfer (receiving a file from a remote user).
 
 .. _class_IRCDCCTransfer_constant_TYPE_CHAT:
 
@@ -127,11 +119,7 @@ enum **Type**: :ref:`🔗<enum_IRCDCCTransfer_Type>`
 
 :ref:`Type<enum_IRCDCCTransfer_Type>` **TYPE_CHAT** = ``2``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+Represents a DCC chat session (direct peer-to-peer messaging).
 
 .. rst-class:: classref-item-separator
 
@@ -149,11 +137,7 @@ enum **Status**: :ref:`🔗<enum_IRCDCCTransfer_Status>`
 
 :ref:`Status<enum_IRCDCCTransfer_Status>` **DCC_STATUS_PENDING** = ``0``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The transfer has been created but not yet started.
 
 .. _class_IRCDCCTransfer_constant_DCC_STATUS_CONNECTING:
 
@@ -161,11 +145,7 @@ enum **Status**: :ref:`🔗<enum_IRCDCCTransfer_Status>`
 
 :ref:`Status<enum_IRCDCCTransfer_Status>` **DCC_STATUS_CONNECTING** = ``1``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The transfer is attempting to establish a connection.
 
 .. _class_IRCDCCTransfer_constant_DCC_STATUS_TRANSFERRING:
 
@@ -173,11 +153,7 @@ enum **Status**: :ref:`🔗<enum_IRCDCCTransfer_Status>`
 
 :ref:`Status<enum_IRCDCCTransfer_Status>` **DCC_STATUS_TRANSFERRING** = ``2``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The transfer is actively sending or receiving data.
 
 .. _class_IRCDCCTransfer_constant_DCC_STATUS_COMPLETED:
 
@@ -185,11 +161,7 @@ enum **Status**: :ref:`🔗<enum_IRCDCCTransfer_Status>`
 
 :ref:`Status<enum_IRCDCCTransfer_Status>` **DCC_STATUS_COMPLETED** = ``3``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The transfer completed successfully.
 
 .. _class_IRCDCCTransfer_constant_DCC_STATUS_FAILED:
 
@@ -197,11 +169,7 @@ enum **Status**: :ref:`🔗<enum_IRCDCCTransfer_Status>`
 
 :ref:`Status<enum_IRCDCCTransfer_Status>` **DCC_STATUS_FAILED** = ``4``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The transfer encountered an error and failed.
 
 .. _class_IRCDCCTransfer_constant_DCC_STATUS_CANCELLED:
 
@@ -209,11 +177,7 @@ enum **Status**: :ref:`🔗<enum_IRCDCCTransfer_Status>`
 
 :ref:`Status<enum_IRCDCCTransfer_Status>` **DCC_STATUS_CANCELLED** = ``5``
 
-.. container:: contribute
-
-	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
-
-
+The transfer was cancelled before completion.
 
 .. rst-class:: classref-section-separator
 
@@ -235,9 +199,7 @@ Property Descriptions
 - |void| **set_address**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_address**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Remote IP address used for the DCC connection.
 
 .. rst-class:: classref-item-separator
 
@@ -254,9 +216,7 @@ Property Descriptions
 - |void| **set_file_size**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_file_size**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Total size of the file being transferred in bytes.
 
 .. rst-class:: classref-item-separator
 
@@ -273,9 +233,7 @@ Property Descriptions
 - |void| **set_filename**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_filename**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Name of the file being sent or received.
 
 .. rst-class:: classref-item-separator
 
@@ -292,9 +250,7 @@ Property Descriptions
 - |void| **set_local_path**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_local_path**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Local filesystem path where the file will be saved or read from.
 
 .. rst-class:: classref-item-separator
 
@@ -311,9 +267,7 @@ Property Descriptions
 - |void| **set_port**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_port**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Port used for the DCC connection.
 
 .. rst-class:: classref-item-separator
 
@@ -330,9 +284,7 @@ Property Descriptions
 - |void| **set_remote_nick**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_remote_nick**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Nickname of the remote IRC user involved in the transfer.
 
 .. rst-class:: classref-item-separator
 
@@ -349,9 +301,7 @@ Property Descriptions
 - |void| **set_status**\ (\ value\: :ref:`Status<enum_IRCDCCTransfer_Status>`\ )
 - :ref:`Status<enum_IRCDCCTransfer_Status>` **get_status**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Current status of the transfer.
 
 .. rst-class:: classref-item-separator
 
@@ -367,9 +317,7 @@ Property Descriptions
 
 - :ref:`int<class_int>` **get_transferred**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Number of bytes transferred so far.
 
 .. rst-class:: classref-item-separator
 
@@ -386,9 +334,7 @@ Property Descriptions
 - |void| **set_transfer_type**\ (\ value\: :ref:`Type<enum_IRCDCCTransfer_Type>`\ )
 - :ref:`Type<enum_IRCDCCTransfer_Type>` **get_transfer_type**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Type of DCC transfer.
 
 .. rst-class:: classref-item-separator
 
@@ -405,9 +351,7 @@ Property Descriptions
 - |void| **set_use_ipv6**\ (\ value\: :ref:`bool<class_bool>`\ )
 - :ref:`bool<class_bool>` **get_use_ipv6**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Whether to use IPv6 for the connection.
 
 .. rst-class:: classref-section-separator
 

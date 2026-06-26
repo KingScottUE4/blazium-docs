@@ -44,9 +44,15 @@ Nodes
     class_audiostreamplayer
     class_audiostreamplayer2d
     class_audiostreamplayer3d
+    class_autowork
+    class_autoworke2eserver
+    class_autoworkruntimeui
+    class_autoworktest
     class_backbuffercopy
     class_basebutton
-    class_blaziumclient
+    class_blaziumgoapaction
+    class_blaziumgoapagent
+    class_blaziumgoapgoal
     class_bone2d
     class_boneattachment3d
     class_boxcontainer
@@ -147,6 +153,7 @@ Nodes
     class_itemlist
     class_joint2d
     class_joint3d
+    class_justamcpserver
     class_label
     class_label3d
     class_light2d
@@ -157,13 +164,10 @@ Nodes
     class_line2d
     class_lineedit
     class_linkbutton
-    class_lobbyclient
-    class_loginclient
     class_lookatmodifier3d
     class_margincontainer
     class_marker2d
     class_marker3d
-    class_masterserverclient
     class_menubar
     class_menubutton
     class_meshinstance2d
@@ -173,6 +177,10 @@ Nodes
     class_multimeshinstance3d
     class_multiplayerspawner
     class_multiplayersynchronizer
+    class_multiusereditordock
+    class_multiusereditorghostcursoroverlay
+    class_multiusereditorplugin
+    class_multiusereditorsettingsui
     class_navigationagent2d
     class_navigationagent3d
     class_navigationlink2d
@@ -212,7 +220,6 @@ Nodes
     class_physicsbody3d
     class_pinjoint2d
     class_pinjoint3d
-    class_pogrclient
     class_pointlight2d
     class_polygon2d
     class_popup
@@ -222,6 +229,7 @@ Nodes
     class_range
     class_raycast2d
     class_raycast3d
+    class_reactclient
     class_referencerect
     class_reflectionprobe
     class_remotetransform2d
@@ -235,7 +243,6 @@ Nodes
     class_scriptcreatedialog
     class_scripteditor
     class_scripteditorbase
-    class_scriptedlobbyclient
     class_scrollbar
     class_scrollcontainer
     class_separator
@@ -265,6 +272,7 @@ Nodes
     class_staticbody2d
     class_staticbody3d
     class_statusindicator
+    class_steameditorplugin
     class_subviewport
     class_subviewportcontainer
     class_tabbar
@@ -298,6 +306,7 @@ Nodes
     class_vsplitcontainer
     class_window
     class_worldenvironment
+    class_xboxeditorplugin
     class_xranchor3d
     class_xrbodymodifier3d
     class_xrcamera3d
@@ -443,7 +452,6 @@ Resources
     class_font
     class_fontfile
     class_fontvariation
-    class_gameserverinfo
     class_gdextension
     class_gdscript
     class_gdscriptsyntaxhighlighter
@@ -495,8 +503,6 @@ Resources
     class_json
     class_labelsettings
     class_lightmapgidata
-    class_lobbyinfo
-    class_lobbypeer
     class_material
     class_mesh
     class_meshlibrary
@@ -763,6 +769,22 @@ Other objects
     class_audiostreamplaybackpolyphonic
     class_audiostreamplaybackresampled
     class_audiostreamplaybacksynchronized
+    class_autoworkcollector
+    class_autoworkconfig
+    class_autoworkdoubler
+    class_autoworke2econfig
+    class_autoworkhookscript
+    class_autoworkinputsender
+    class_autoworklogger
+    class_autoworksignalhook
+    class_autoworksignalwatcher
+    class_autoworkspy
+    class_autoworkstubber
+    class_autoworkstubparams
+    class_autoworkvscodedebugger
+    class_blaziumbignum
+    class_blaziumgoapactionplanner
+    class_blaziumgoapworldstate
     class_callbacktweener
     class_camerafeed
     class_cameraserver
@@ -771,10 +793,28 @@ Other objects
     class_configfile
     class_crowdcontrol
     class_crypto
+    class_csvasynctask
+    class_csvchunkprocessor
+    class_csvdialect
+    class_csvexporter
+    class_csvimporter
+    class_csvindex
+    class_csvreader
+    class_csvrowmodel
+    class_csvtable
+    class_csvwriter
+    class_decodedjwt
     class_diraccess
+    class_discord
+    class_discordauthresult
     class_discordembeddedappresponse
     class_discordembeddedappresult
     class_displayserver
+    class_dotinifile
+    class_dsvexporter
+    class_dsvimporter
+    class_dsvreader
+    class_dsvwriter
     class_dtlsserver
     class_editorcontextmenuplugin
     class_editordebuggerplugin
@@ -829,9 +869,38 @@ Other objects
     class_fileaccess
     class_framebuffercacherd
     class_gdextensionmanager
+    class_gdk
+    class_gdkresult
     class_geometry2d
     class_geometry3d
     class_gltfobjectmodelproperty
+    class_godottsonanimation
+    class_godottsonchunk
+    class_godottsonenumdefinition
+    class_godottsonenumvalue
+    class_godottsonframe
+    class_godottsongrid
+    class_godottsonlayer
+    class_godottsonmap
+    class_godottsonobject
+    class_godottsonproject
+    class_godottsonprojectdata
+    class_godottsonprojectfolder
+    class_godottsonprojectpropertytypes
+    class_godottsonproperty
+    class_godottsonterrain
+    class_godottsontext
+    class_godottsontile
+    class_godottsontiledclass
+    class_godottsontileobject
+    class_godottsontileset
+    class_godottsontileson
+    class_godottsontransformations
+    class_godottsonwangcolor
+    class_godottsonwangset
+    class_godottsonwangtile
+    class_godottsonworld
+    class_godottsonworldmapdata
     class_hashingcontext
     class_hmaccontext
     class_httpclient
@@ -856,7 +925,41 @@ Other objects
     class_javascriptobject
     class_jnisingleton
     class_jsonrpc
+    class_justamcpanalysistools
+    class_justamcpanimationtools
+    class_justamcpaudiotools
+    class_justamcpbatchtools
+    class_justamcpdocumentationtools
+    class_justamcpexporttools
+    class_justamcpinputtools
+    class_justamcpmultiusertools
+    class_justamcpnodetools
+    class_justamcpparticletools
+    class_justamcpphysicstools
+    class_justamcpprofilingtools
+    class_justamcpprojecttools
+    class_justamcpprompt
+    class_justamcppromptblaziumcontext
+    class_justamcppromptblaziumworkflow
+    class_justamcpprompteditorstate
+    class_justamcppromptexecutor
+    class_justamcppromptprojectinfo
+    class_justamcpresource
+    class_justamcpresourceexecutor
+    class_justamcpresourceprojectfile
+    class_justamcpresourcesystemlogs
+    class_justamcpresourcetools
+    class_justamcpruntime
+    class_justamcpscene3dtools
+    class_justamcpscenetools
+    class_justamcpscripttools
+    class_justamcpshadertools
+    class_justamcptaskmanager
+    class_justamcpthemetools
+    class_justamcptilemaptools
+    class_justamcptoolexecutor
     class_jwt
+    class_jwtbuilder
     class_kickapi
     class_kickcategoriesrequests
     class_kickchannelsrequests
@@ -872,24 +975,8 @@ Other objects
     class_kinematiccollision3d
     class_lightmapper
     class_lightmapperrd
-    class_lobbyresponse
-    class_lobbyresult
-    class_loginauthresponse
-    class_loginauthresult
-    class_loginconnectresponse
-    class_loginconnectresult
-    class_loginidresponse
-    class_loginidresult
-    class_loginurlresponse
-    class_loginurlresult
-    class_loginverifytokenresponse
-    class_loginverifytokenresult
     class_mainloop
     class_marshalls
-    class_masterserverlistresponse
-    class_masterserverlistresult
-    class_masterserverresponse
-    class_masterserverresult
     class_meshconvexdecompositionsettings
     class_meshdatatool
     class_methodtweener
@@ -899,6 +986,8 @@ Other objects
     class_multiplayerapiextension
     class_multiplayerpeer
     class_multiplayerpeerextension
+    class_multiusereditorpermissions
+    class_multiusereditorsettingsinspectorplugin
     class_mutex
     class_nativemenu
     class_navigationmeshgenerator
@@ -951,8 +1040,6 @@ Other objects
     class_physicstestmotionparameters3d
     class_physicstestmotionresult2d
     class_physicstestmotionresult3d
-    class_pogrresponse
-    class_pogrresult
     class_projectsettings
     class_propertytweener
     class_randomnumbergenerator
@@ -1015,8 +1102,6 @@ Other objects
     class_scenestate
     class_scenetree
     class_scenetreetimer
-    class_scriptedlobbyresponse
-    class_scriptedlobbyresult
     class_scriptlanguage
     class_scriptlanguageextension
     class_semaphore
@@ -1025,10 +1110,17 @@ Other objects
     class_socketioclient
     class_socketionamespace
     class_sqliteaccess
+    class_sqlitebackup
+    class_sqliteblob
     class_sqlitecolumnschema
     class_sqlitequery
     class_sqlitequeryresult
     class_sseconnection
+    class_steam
+    class_steamachievementinfo
+    class_steamauthresult
+    class_steaminventoryitem
+    class_steamitemdefinition
     class_streampeer
     class_streampeerbuffer
     class_streampeerextension
@@ -1051,6 +1143,7 @@ Other objects
     class_tiledata
     class_time
     class_tlsoptions
+    class_townsdkclient
     class_translationdomain
     class_translationserver
     class_treeitem
@@ -1078,8 +1171,6 @@ Other objects
     class_uniformsetcacherd
     class_upnp
     class_upnpdevice
-    class_viewlobbyresponse
-    class_viewlobbyresult
     class_weakref
     class_webrtcdatachannel
     class_webrtcdatachannelextension

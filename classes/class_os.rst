@@ -919,7 +919,7 @@ Returns the file path to the current engine executable.
 
 On Android devices: Returns the list of dangerous permissions that have been granted.
 
-On macOS: Returns the list of user selected folders accessible to the application (sandboxed applications only). Use the native file dialog to request folder access permission.
+On macOS: Returns the list of granted permissions and user selected folders accessible to the application (sandboxed applications only). Use the native file dialog to request folder access permission.
 
 .. rst-class:: classref-item-separator
 
@@ -1745,9 +1745,11 @@ The ``name`` must be the full permission name. For example:
 
 - ``OS.request_permission("android.permission.POST_NOTIFICATIONS")``\ 
 
-\ **Note:** Permission must be checked during export.
+- ``OS.request_permission("macos.permission.RECORD_SCREEN")``\ 
 
-\ **Note:** This method is only implemented on Android.
+\ **Note:** On Android, permission must be checked during export.
+
+\ **Note:** This method is implemented on Android and macOS.
 
 .. rst-class:: classref-item-separator
 
