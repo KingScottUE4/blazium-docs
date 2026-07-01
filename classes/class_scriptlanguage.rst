@@ -12,7 +12,7 @@ ScriptLanguage
 
 **Inherits:** :ref:`Object<class_Object>`
 
-**Inherited By:** :ref:`ScriptLanguageExtension<class_ScriptLanguageExtension>`
+**Inherited By:** :ref:`LuauScriptLanguage<class_LuauScriptLanguage>`, :ref:`ScriptLanguageExtension<class_ScriptLanguageExtension>`
 
 .. container:: contribute
 

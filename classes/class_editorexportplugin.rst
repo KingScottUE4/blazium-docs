@@ -12,6 +12,8 @@ EditorExportPlugin
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
+**Inherited By:** :ref:`EditorExportLuau<class_EditorExportLuau>`
+
 A script that is executed when exporting the project.
 
 .. rst-class:: classref-introduction-group

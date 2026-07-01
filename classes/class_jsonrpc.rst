@@ -12,6 +12,8 @@ JSONRPC
 
 **Inherits:** :ref:`Object<class_Object>`
 
+**Inherited By:** :ref:`LuauLanguageProtocol<class_LuauLanguageProtocol>`
+
 A helper to handle dictionaries which look like JSONRPC documents.
 
 .. rst-class:: classref-introduction-group

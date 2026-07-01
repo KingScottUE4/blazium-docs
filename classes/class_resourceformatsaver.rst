@@ -12,6 +12,8 @@ ResourceFormatSaver
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
+**Inherited By:** :ref:`ResourceFormatSaverLuau<class_ResourceFormatSaverLuau>`
+
 Saves a specific resource type to a file.
 
 .. rst-class:: classref-introduction-group
