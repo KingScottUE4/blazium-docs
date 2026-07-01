@@ -19,6 +19,7 @@ Globals
 
     class_@gdscript
     class_@globalscope
+    class_@luau
 
 Nodes
 =====
@@ -165,6 +166,8 @@ Nodes
     class_lineedit
     class_linkbutton
     class_lookatmodifier3d
+    class_luaueditorplugin
+    class_luaulanguageserverplugin
     class_margincontainer
     class_marker2d
     class_marker3d
@@ -503,6 +506,8 @@ Resources
     class_json
     class_labelsettings
     class_lightmapgidata
+    class_luauscript
+    class_luausyntaxhighlighter
     class_material
     class_mesh
     class_meshlibrary
@@ -819,6 +824,7 @@ Other objects
     class_editorcontextmenuplugin
     class_editordebuggerplugin
     class_editordebuggersession
+    class_editorexportluau
     class_editorexportplatform
     class_editorexportplatformandroid
     class_editorexportplatformextension
@@ -874,33 +880,6 @@ Other objects
     class_geometry2d
     class_geometry3d
     class_gltfobjectmodelproperty
-    class_godottsonanimation
-    class_godottsonchunk
-    class_godottsonenumdefinition
-    class_godottsonenumvalue
-    class_godottsonframe
-    class_godottsongrid
-    class_godottsonlayer
-    class_godottsonmap
-    class_godottsonobject
-    class_godottsonproject
-    class_godottsonprojectdata
-    class_godottsonprojectfolder
-    class_godottsonprojectpropertytypes
-    class_godottsonproperty
-    class_godottsonterrain
-    class_godottsontext
-    class_godottsontile
-    class_godottsontiledclass
-    class_godottsontileobject
-    class_godottsontileset
-    class_godottsontileson
-    class_godottsontransformations
-    class_godottsonwangcolor
-    class_godottsonwangset
-    class_godottsonwangtile
-    class_godottsonworld
-    class_godottsonworldmapdata
     class_hashingcontext
     class_hmaccontext
     class_httpclient
@@ -975,6 +954,16 @@ Other objects
     class_kinematiccollision3d
     class_lightmapper
     class_lightmapperrd
+    class_luacompileoptions
+    class_luadebug
+    class_luastate
+    class_luau
+    class_luauformatter
+    class_luaulanguageprotocol
+    class_luauscriptlanguage
+    class_luausignalwaiter
+    class_luautextdocument
+    class_luauworkspace
     class_mainloop
     class_marshalls
     class_meshconvexdecompositionsettings
@@ -1077,7 +1066,9 @@ Other objects
     class_renderscenedatard
     class_resource
     class_resourceformatloader
+    class_resourceformatloaderluau
     class_resourceformatsaver
+    class_resourceformatsaverluau
     class_resourceimporter
     class_resourceimporterbitmap
     class_resourceimporterbmfont
@@ -1140,7 +1131,34 @@ Other objects
     class_textservermanager
     class_themedb
     class_thread
+    class_tiledanimation
     class_tiledata
+    class_tiledchunk
+    class_tiledclass
+    class_tiledenumdefinition
+    class_tiledenumvalue
+    class_tiledframe
+    class_tiledgrid
+    class_tiledlayer
+    class_tiledmap
+    class_tiledobject
+    class_tiledproject
+    class_tiledprojectdata
+    class_tiledprojectfolder
+    class_tiledprojectpropertytypes
+    class_tiledproperty
+    class_tiledterrain
+    class_tiledtext
+    class_tiledtile
+    class_tiledtileobject
+    class_tiledtileset
+    class_tiledtileson
+    class_tiledtransformations
+    class_tiledwangcolor
+    class_tiledwangset
+    class_tiledwangtile
+    class_tiledworld
+    class_tiledworldmapdata
     class_time
     class_tlsoptions
     class_townsdkclient
@@ -1209,6 +1227,7 @@ Editor-only
     class_editorcontextmenuplugin
     class_editordebuggerplugin
     class_editordebuggersession
+    class_editorexportluau
     class_editorexportplatform
     class_editorexportplatformandroid
     class_editorexportplatformextension

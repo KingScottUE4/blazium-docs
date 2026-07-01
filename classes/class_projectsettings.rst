@@ -2033,6 +2033,8 @@ Properties
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`layer_names/avoidance/layer_32<class_ProjectSettings_property_layer_names/avoidance/layer_32>`                                                                                                       | ``""``                                                                                               |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`luau_module/package/path<class_ProjectSettings_property_luau_module/package/path>`                                                                                                                   | ``"res://?.luau;res://?.lua;res://?.mod.luau;res://?/init.luau"``                                    |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`memory/limits/message_queue/max_size_mb<class_ProjectSettings_property_memory/limits/message_queue/max_size_mb>`                                                                                     | ``32``                                                                                               |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                         | :ref:`navigation/2d/default_cell_size<class_ProjectSettings_property_navigation/2d/default_cell_size>`                                                                                                     | ``1.0``                                                                                              |
@@ -15027,6 +15029,20 @@ Optional name for the navigation avoidance layer 31. If left empty, the layer wi
 :ref:`String<class_String>` **layer_names/avoidance/layer_32** = ``""`` :ref:`🔗<class_ProjectSettings_property_layer_names/avoidance/layer_32>`
 
 Optional name for the navigation avoidance layer 32. If left empty, the layer will display as "Layer 32".
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ProjectSettings_property_luau_module/package/path:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **luau_module/package/path** = ``"res://?.luau;res://?.lua;res://?.mod.luau;res://?/init.luau"`` :ref:`🔗<class_ProjectSettings_property_luau_module/package/path>`
+
+.. container:: contribute
+
+	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
 
 .. rst-class:: classref-item-separator
 

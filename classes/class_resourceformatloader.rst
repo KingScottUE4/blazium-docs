@@ -12,6 +12,8 @@ ResourceFormatLoader
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
+**Inherited By:** :ref:`ResourceFormatLoaderLuau<class_ResourceFormatLoaderLuau>`
+
 Loads a specific resource type from a file.
 
 .. rst-class:: classref-introduction-group

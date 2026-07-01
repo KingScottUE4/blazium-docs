@@ -37,13 +37,19 @@ Methods
 .. table::
    :widths: auto
 
-   +---------------------------+----------------------------------------------------------------------------------------------------------------------+
-   | |void|                    | :ref:`add_script<class_AutoworkCollector_method_add_script>`\ (\ path\: :ref:`String<class_String>`\ )               |
-   +---------------------------+----------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Array<class_Array>` | :ref:`get_scripts<class_AutoworkCollector_method_get_scripts>`\ (\ ) |const|                                         |
-   +---------------------------+----------------------------------------------------------------------------------------------------------------------+
-   | |void|                    | :ref:`process_directory<class_AutoworkCollector_method_process_directory>`\ (\ path\: :ref:`String<class_String>`\ ) |
-   +---------------------------+----------------------------------------------------------------------------------------------------------------------+
+   +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                    | :ref:`add_script<class_AutoworkCollector_method_add_script>`\ (\ path\: :ref:`String<class_String>`\ )                               |
+   +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Array<class_Array>` | :ref:`get_scripts<class_AutoworkCollector_method_get_scripts>`\ (\ ) |const|                                                         |
+   +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                    | :ref:`process_directory<class_AutoworkCollector_method_process_directory>`\ (\ path\: :ref:`String<class_String>`\ )                 |
+   +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                    | :ref:`set_include_subdirectories<class_AutoworkCollector_method_set_include_subdirectories>`\ (\ enable\: :ref:`bool<class_bool>`\ ) |
+   +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                    | :ref:`set_script_prefix<class_AutoworkCollector_method_set_script_prefix>`\ (\ prefix\: :ref:`String<class_String>`\ )               |
+   +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                    | :ref:`set_script_suffix<class_AutoworkCollector_method_set_script_suffix>`\ (\ suffix\: :ref:`String<class_String>`\ )               |
+   +---------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -87,6 +93,48 @@ Returns an :ref:`Array<class_Array>` containing all collected script paths.
 |void| **process_directory**\ (\ path\: :ref:`String<class_String>`\ ) :ref:`🔗<class_AutoworkCollector_method_process_directory>`
 
 Searches the directory at ``path`` for test scripts and adds them to the collection.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_AutoworkCollector_method_set_include_subdirectories:
+
+.. rst-class:: classref-method
+
+|void| **set_include_subdirectories**\ (\ enable\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_AutoworkCollector_method_set_include_subdirectories>`
+
+.. container:: contribute
+
+	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_AutoworkCollector_method_set_script_prefix:
+
+.. rst-class:: classref-method
+
+|void| **set_script_prefix**\ (\ prefix\: :ref:`String<class_String>`\ ) :ref:`🔗<class_AutoworkCollector_method_set_script_prefix>`
+
+.. container:: contribute
+
+	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_AutoworkCollector_method_set_script_suffix:
+
+.. rst-class:: classref-method
+
+|void| **set_script_suffix**\ (\ suffix\: :ref:`String<class_String>`\ ) :ref:`🔗<class_AutoworkCollector_method_set_script_suffix>`
+
+.. container:: contribute
+
+	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
